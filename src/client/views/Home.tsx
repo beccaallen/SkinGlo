@@ -6,13 +6,15 @@ const Home: React.FC<HomeProps> = () => {
     return (
 
         <main className="container">
-            <h1>Home
-            </h1>
+            <div className="row">
+                
+            </div>
         </main>
     )
 
 }
 
 interface HomeProps {}
+
 
 export default Home;
