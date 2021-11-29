@@ -49,8 +49,23 @@ h2 {
 	font-size: 34px !important;
 	font-weight: 400 !important;
 	color: $dark !important;
+	text-decoration:none !important
 }
-//footer logo = h6
+
+.link-nav {
+	font-size: 16px !important;
+	font-weight: 200 !important;
+	color: $dark !important;
+	text-decoration:none !important
+
+}
+
+a{
+	text-decoration:none !important;
+	color: $dark !important;
+
+
+}
 
 h6 {
 	font-family: 'Be Vietnam Pro', sans-serif !important;
