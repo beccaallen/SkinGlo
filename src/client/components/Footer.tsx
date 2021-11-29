@@ -6,7 +6,7 @@ const Footer: React.FC<FooterProps>= props => {
 	return (
 		<footer className="navbar navbar-default navbar-static-bottom">
             <div className="container-fluid">
-                        <h1><NavLink className="m-3 text-dark btn-link type-logo" to="/">SkinGlo</NavLink></h1>
+                        <h1><NavLink className="m-3 text-dark btn-link logo-nav" to="/">SkinGlo</NavLink></h1>
                         <span className="navlinks">
                         </span>
                     </div>
