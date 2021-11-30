@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 const Home: React.FC<HomeProps> = () => {
   return (
@@ -17,12 +18,13 @@ const Home: React.FC<HomeProps> = () => {
         <div className="col-lg-5 text-center">
           <h1 className="text-light">Get to Glo!</h1>
           <h2>finding compatible skincare has never been easier</h2>
+          <Link to="/compare"><button className="btn btn-info compare-btn shadow-sm m-3">start comparing</button></Link>
         </div>
       </div>
       {/* divider */}
       <div className="row justify-content-center m-5">
-        <div className="col-lg-2 p-7 m-2 text-center">
-          <span className="p-4">
+        <div className="col-lg-3 p-5 mx-5 text-center">
+          <span className="mb-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100"
@@ -41,7 +43,7 @@ const Home: React.FC<HomeProps> = () => {
             sit amet luctus venenatis lectus magna fringilla urna.
           </p>
         </div>
-        <div className="col-lg-2 p-7 m-2 text-center">
+        <div className="col-lg-3 p-5 mx-5  text-center">
           <span className="p-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +64,7 @@ const Home: React.FC<HomeProps> = () => {
             sit amet luctus venenatis lectus magna fringilla urna.
           </p>
         </div>
-        <div className="col-lg-2 p-7 m-2 text-center">
+        <div className="col-lg-3 p-5 mx-5  text-center">
           <span className="p-7">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +88,9 @@ const Home: React.FC<HomeProps> = () => {
       <div className="row h-75 bg-primary background-tint-primary" style={{
         backgroundImage: `url("../photos/bg-logos.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
       }}>
-        <h2 className="text-white m-5">compare 2,000+ products</h2>
+        <div className="row">
+          <h2 className="text-white m-5">compare 2,000+ products</h2>
+        </div>
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-3 d-flex">
             <img src="../photos/Keihls.png" alt="Keihl's Logo" height="100px" />
@@ -98,11 +102,11 @@ const Home: React.FC<HomeProps> = () => {
             <img src="../photos/DrunkElephant-logo.png" alt="Drunk Elephant Logo" height="130px" />
           </div>
         </div>
-        <div className="row justify-content-center align-items-center">
-          <div className="col-lg-3 d-flex">
+        <div className="row justify-content-center align-items-center mb-5">
+          <div className="col-lg-3 d-flex m-5">
             <img src="../photos/ElishaCoy-logo.png" alt="Elisha Coy Logo" height="60px" />
           </div>
-          <div className="col-lg-3 d-flex">
+          <div className="col-lg-3 d-flex m-5">
             <img src="../photos/amorepacific-logo.png" alt="Amore Pacific Logo" height="40px" />
           </div>
           

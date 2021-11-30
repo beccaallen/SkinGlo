@@ -89,8 +89,8 @@ a{
 	// z-index: 3 !important;
 	position: absolute !important;
 	bottom: 40%;
-	left:  25%;
-	right: 25%;
+	left:  15%;
+	right: 15%;
 	justify-content: center !important;
 
 }
@@ -106,6 +106,13 @@ a{
 .background-tint-info {
 	background-color: $info; /* Tint color */
 	background-blend-mode: multiply;
+  }
+
+  .compare-btn {
+	  height: 80 px !important;
+	  padding: 1em !important;
+	  border-radius: 15px !important;
+	  font-family: 'Abril Fatface', cursive !important;
   }
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,600&family=Shippori+Antique+B1&display=swap');
