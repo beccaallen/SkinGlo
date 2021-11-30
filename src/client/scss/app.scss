@@ -85,6 +85,25 @@ a{
 	font-weight: 400 !important
 }
 
+.hero-text {
+	z-index: 3 !important;
+	position:relative !important
+
+}
+.hero-slider {
+	z-index: 1 !important;
+	position: absolute !important
+
+}
+.background-tint-primary {
+	background-color: $primary; /* Tint color */
+	background-blend-mode:multiply;
+  }
+.background-tint-info {
+	background-color: $info; /* Tint color */
+	background-blend-mode: multiply;
+  }
+
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,600&family=Shippori+Antique+B1&display=swap');
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
