@@ -23,6 +23,7 @@ const Footer: React.FC<FooterProps> = props => {
                     </svg>
                 </div>
             </span>
+
         </footer>
     )
 }
