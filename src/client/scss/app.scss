@@ -24,6 +24,7 @@ $theme-colors: (
 	 display: flexbox !important;
 	justify-content: space-between !important;
 	height: 100% !important;
+	margin: 0;
  }
 
 
@@ -44,7 +45,7 @@ $theme-colors: (
 h1 {
 	font-family: 'Be Vietnam Pro', sans-serif !important;
 	font-size: 72px !important;
-	font-weight: 400 !important
+	font-weight: 200 !important
 }
 h2 {
 	font-family: 'Abril Fatface', cursive !important;
@@ -84,15 +85,18 @@ a{
 	font-size: 18px !important;
 	font-weight: 400 !important
 }
-
 .hero-text {
-	z-index: 3 !important;
-	position:relative !important
+	// z-index: 3 !important;
+	position: absolute !important;
+	bottom: 40%;
+	left:  25%;
+	right: 25%;
+	justify-content: center !important;
 
 }
 .hero-slider {
 	z-index: 1 !important;
-	position: absolute !important
+	// position: absolute !important
 
 }
 .background-tint-primary {

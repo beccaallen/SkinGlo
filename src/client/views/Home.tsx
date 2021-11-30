@@ -13,9 +13,11 @@ const Home: React.FC<HomeProps> = () => {
         }}>
         </div>
       </div>
-      <div className="row justify-content-center hero-text">
-        <h1 className="text-light">Get to Glo!</h1>
-        <h2>finding compatible skincare has never been easier</h2>
+      <div className="row hero-text">
+        <div className="col-lg-5 text-center">
+          <h1 className="text-light">Get to Glo!</h1>
+          <h2>finding compatible skincare has never been easier</h2>
+        </div>
       </div>
       {/* divider */}
       <div className="row justify-content-center m-5">
