@@ -115,6 +115,18 @@ a{
 	  font-family: 'Abril Fatface', cursive !important;
   }
 
+  .ampersand {
+	font-family: 'Abril Fatface', cursive !important;
+	font-size: 72px !important;
+	color: $secondary !important; 
+
+  }
+
+  label {
+	font-family: 'Be Vietnam Pro', sans-serif !important;
+	font-size: 18px !important;
+  }
+
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,600&family=Shippori+Antique+B1&display=swap');
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
