@@ -111,6 +111,10 @@ a{
 	background-color: $info; /* Tint color */
 	background-blend-mode: multiply;
   }
+.background-tint-secondary {
+	background-color: $success; /* Tint color */
+	background-blend-mode: multiply;
+  }
 
   .compare-btn {
 	  height: 80 px !important;
@@ -130,6 +134,45 @@ a{
 	font-family: 'Be Vietnam Pro', sans-serif !important;
 	font-size: 18px !important;
   }
+
+  .card-body {
+	  background-color: $secondary !important;
+	  color:$light !important;
+	  font-family: 'Be Vietnam Pro', sans-serif !important;
+
+  }
+
+//   .page-content {
+// 	  margin: 5em !important;
+// 	  height: 10em !important
+//   }
+
+.card-match {
+	border-radius: 30px !important;
+	width: 22em !important; 
+	height: 30em !important;
+	border: $success 10px solid !important;
+
+}
+.card-nonmatch {
+	border-radius: 30px !important;
+	width: 22em !important; 
+	height: 30em !important;
+	border: $danger 10px solid !important;
+
+}
+.card-body {
+	border-radius: 0px 0px 20px 20px !important;
+
+}
+.card-img-top {
+	border-radius: 20px 20px 0px 0px  !important;
+	height: 22em !important
+
+}
+
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,600&family=Shippori+Antique+B1&display=swap');
 

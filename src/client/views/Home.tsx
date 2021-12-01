@@ -16,7 +16,7 @@ const Home: React.FC<HomeProps> = () => {
       </div>
       <div className="row hero-text">
         <div className="col-lg-5 text-center">
-          <h1 className="text-light">Get to Glo!!!</h1>
+          <h1 className="text-light">Get to Glo!</h1>
           <h2>finding compatible skincare has never been easier</h2>
           <Link to="/compare"><button className="btn btn-info compare-btn shadow-sm m-3">start comparing</button></Link>
         </div>
