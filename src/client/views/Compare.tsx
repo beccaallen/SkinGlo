@@ -10,27 +10,39 @@ const Compare: React.FC<CompareProps> = () => {
 
     return (
 <>
+
+ 
         <main className="container-fluid">
-            <div className="row h-100 justify-content-center " style={{
+            <div className="row h-100 justify-content-center align-items-center" style={{
           backgroundImage: `url("../photos/bg-compare.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
         }}>
-            <form className="row justify-content-center align-items-center bg-primary  bg-opacity-75 mt-5 mx-5">
-                <fieldset className="col-lg-2">
-                    <label><strong>1st</strong> Product</label>
-                <i className="bi bi-search"></i>
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                </fieldset>
-                <fieldset className="col-lg-2">
-                    <div className="text-center ampersand text-white">&</div>
-                </fieldset>
-                <div className="col-lg-2">
-                <label><strong>2nd</strong> Product</label>
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+            <div className="p-5">
+                <div className="d-flex h-75 bg-primary bg-opacity-75 align-items-center justify-content-center">
+                    
+                    <div className="row d-flex w-50 justify-content-center align-items-center">
+                        <form className="d-flex justify-content-center align-items-center">
+                            <fieldset className="col-lg-3 col-md-2 col-sm-1">
+                                <label className="py-3"><strong>1st</strong> Product</label>
+                            <i className="bi bi-search"></i>
+                            <input className="form-control mr-sm-2 search-bar shadow" type="search" placeholder="Search" aria-label="Search"/>
+                            </fieldset>
+                        
+                            <fieldset className="col-lg-3 col-md-2">
+                                <div className="text-center ampersand text-white">&</div>
+                            </fieldset>
+                        
+                            <div className="col-lg-3 col-md-2">
+                            <label className="py-3"><strong>2nd</strong> Product</label>
+                            <input className="form-control mr-sm-2 search-bar shadow" type="search" placeholder="Search" aria-label="Search"/>
+                            </div>
+                        </form>
+                            <div className="row d-flex justify-content-center m-5 py-5">
+                                <button className="col-lg-3 col-md-2 btn btn-info compare-btn  shadow m-3 ">See if it's a match</button>
+                            </div>
+                    </div>
+                
                 </div>
-                <fieldset className="row justify-content-center ">
-                    <div className="col-lg-2"><button className="btn btn-info compare-btn shadow-md m-3">See if it's a match</button></div>
-                </fieldset>
-            </form>
+            </div>
 
             </div>
         </main>
