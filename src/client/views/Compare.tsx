@@ -5,13 +5,14 @@ const Compare: React.FC<CompareProps> = () => {
     return (
 
         <main className="container-fluid">
-            <div className="row h-100 background-tint-primary justify-content-center " style={{
+            <div className="row h-100 justify-content-center " style={{
           backgroundImage: `url("../photos/bg-compare.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
         }}>
             <div className="row justify-content-center align-items-center bg-primary  bg-opacity-75 mt-5 mx-5">
                 <div className="col-lg-2">
                     <label><strong>1st</strong> Product</label>
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                <input className="form-control mr-sm-2" type="search" placeholder="1st Product" aria-label="Search"/>
+                <i className="bi bi-search"></i>
                 </div>
                 <div className="col-lg-2">
                     <div className="text-center ampersand">&</div>

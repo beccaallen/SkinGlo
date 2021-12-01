@@ -107,13 +107,17 @@ a{
 	background-color: $info; /* Tint color */
 	background-blend-mode: multiply;
   }
+.background-tint-secondary {
+	background-color: $info; /* Tint color */
+	background-blend-mode: multiply;
+  }
 
   .compare-btn {
 	  height: 80 px !important;
 	  padding: 1em !important;
 	  border-radius: 15px !important;
-	  font-family: 'Abril Fatface', cursive !important;
-  }
+	  font-family: 'Be Vietnam Pro', sans-serif !important;
+	}
 
   .ampersand {
 	font-family: 'Abril Fatface', cursive !important;

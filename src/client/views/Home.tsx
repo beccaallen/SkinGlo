@@ -5,7 +5,7 @@ const Home: React.FC<HomeProps> = () => {
   return (
     <main className="container-fluid">
       <div className="row h-75 hero-slider">
-        <div className="col-lg-6 bg-primary background-tint-primary" style={{
+        <div className="col-lg-6 bg-primary background-tint-primary bg-opacity-100 " style={{
           backgroundImage: `url("../photos/sam-limon-g5oq-wH71OQ-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
         }}>
         </div>
@@ -85,10 +85,10 @@ const Home: React.FC<HomeProps> = () => {
           </p>
         </div>
       </div>
-      <div className="row h-75 bg-primary background-tint-primary" style={{
+      <div className="row h-75 bg-primary background-tint-secondary" style={{
         backgroundImage: `url("../photos/bg-logos.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
       }}>
-        <div className="row">
+        <div className="row bg-primary  bg-opacity-75 align-items-center">
           <h2 className="text-white m-5">compare 2,000+ products</h2>
         </div>
         <div className="row justify-content-center align-items-center">
