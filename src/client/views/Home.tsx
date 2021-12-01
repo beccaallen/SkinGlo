@@ -18,7 +18,7 @@ const Home: React.FC<HomeProps> = () => {
         <div className="col-lg-5 text-center">
           <h1 className="text-light">Get to Glo!</h1>
           <h2>finding compatible skincare has never been easier</h2>
-          <Link to="/compare"><button className="btn btn-info compare-btn shadow-sm m-3">start comparing</button></Link>
+          <Link to="/compare"><button className="btn btn-info compare-btn shadow m-3">start comparing</button></Link>
         </div>
       </div>
       {/* divider */}
@@ -37,6 +37,7 @@ const Home: React.FC<HomeProps> = () => {
             </svg>
           </span>
           <h6>Identify conflicting ingredients</h6>
+          <br></br>
           <p>
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
@@ -58,6 +59,8 @@ const Home: React.FC<HomeProps> = () => {
             </svg>
           </span>
           <h6>Validate your perfect pairing</h6>
+          <br></br>
+
           <p>
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
@@ -78,6 +81,8 @@ const Home: React.FC<HomeProps> = () => {
             </svg>
           </span>
           <h6>Get on your way to glowing skin</h6>
+          <br></br>
+
           <p>
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
@@ -85,28 +90,28 @@ const Home: React.FC<HomeProps> = () => {
           </p>
         </div>
       </div>
-      <div className="row h-75 bg-primary background-tint-secondary" style={{
+      <div className="h-75 bg-primary background-tint-secondary product-logos" style={{
         backgroundImage: `url("../photos/bg-logos.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
       }}>
-        <div className="row bg-primary  bg-opacity-75 align-items-center">
-          <h2 className="text-white m-5">compare 2,000+ products</h2>
+        <div className="row bg-primary bg-opacity-75 align-items-center">
+          <h2 className="text-dark m-5">compare 2,000+ products</h2>
         </div>
-        <div className="row justify-content-center align-items-center">
-          <div className="col-lg-3 d-flex">
+        <div className="row justify-content-center align-items-center h-50">
+          <div className="col-lg-3 d-flex justify-content-center">
             <img src="../photos/Keihls.png" alt="Keihl's Logo" height="100px" />
           </div>
-          <div className="col-lg-3 d-flex">
+          <div className="col-lg-3 d-flex justify-content-center">
             <img src="../photos/cosrx-logo.png" alt="CosRx Logo" height="50px" />
           </div>
-          <div className="col-lg-3 d-flex">
+          <div className="col-lg-3 d-flex justify-content-center">
             <img src="../photos/DrunkElephant-logo.png" alt="Drunk Elephant Logo" height="130px" />
           </div>
         </div>
         <div className="row justify-content-center align-items-center mb-5">
-          <div className="col-lg-3 d-flex m-5">
+          <div className="col-lg-3 d-flex justify-content-center m-5">
             <img src="../photos/ElishaCoy-logo.png" alt="Elisha Coy Logo" height="60px" />
           </div>
-          <div className="col-lg-3 d-flex m-5">
+          <div className="col-lg-3 d-flex justify-content-center m-5">
             <img src="../photos/amorepacific-logo.png" alt="Amore Pacific Logo" height="40px" />
           </div>
           
