@@ -12,6 +12,16 @@ router.get('/skinglo', async (req, res) => {
         console.log(e);
         res.sendStatus(500);
     }    
-})
+});
+
+router.get('/skinglo/photo/:api_id', async (req, res) => {
+    try {
+        let skinglo = await DB.skinglo.getPhotoPath(Number(req.params.api_id));
+        res.json(skinglo);
+    } catch(e) {
+        console.log(e);
+        res.sendStatus(500);
+    }    
+});
 
 export default router;
