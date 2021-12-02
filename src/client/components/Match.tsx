@@ -22,13 +22,14 @@ const Match: React.FC<MatchProps> = (props) => {
               <div className="card card-match shadow">
                 <img
                   className="card-img-top card-style"
-                  src="../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg"
+                  src="../photos/products/AmorPacific time response eye renewal creme.jpg"
                   alt="Card image cap"
                 />
                 <div className="card-body p-3">
                   <p className="card-text">
                     {" "}
-                    Product Name <br></br> <strong> Brand Name</strong>
+                    Time Response Skin Renewal Serum<br></br> <strong> Amore Pacific</strong>
+              
                   </p>
                 </div>
               </div>
@@ -40,13 +41,13 @@ const Match: React.FC<MatchProps> = (props) => {
               <div className="card card-match shadow">
                 <img
                   className="card-img-top card-style"
-                  src="../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg"
+                  src="https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/8098296_fpx.tif?op_sharpen=1&wid=700&fit=fit,1&$filtersm$"
                   alt="Card image cap"
                 />
                 <div className="card-body p-3">
                   <p className="card-text">
                     {" "}
-                    Product Name <br></br> <strong> Brand Name</strong>
+                    The Moisturizing Soft Cream<br></br> <strong> La Mer</strong>
                   </p>
                 </div>
               </div>
