@@ -24,9 +24,12 @@ const About: React.FC<AboutProps> = (props) => {
           </p>
         </div>
       </div>
-      <div className="row justify-content-center">
-        <div className="col-6 d-flex justify-content-center">
-          <div>
+
+{/* divider */}
+
+      <div className="row d-flex justify-content-center m-5">
+          <div className="col-lg-6 d-flex flex-column justify-content-center">
+          <div className="d-flex justify-content-center" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="55"
@@ -78,14 +81,17 @@ const About: React.FC<AboutProps> = (props) => {
               <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
             </svg>
           </div>
-          <br></br>
-          <div className="rating">
-            <h6>4.7 out of 5 </h6>
-            <p>12,341 Reviews</p>
+          <div  >
+                <div className="d-flex justify-content-center">
+                    <h6>4.7 out of 5 </h6>
+                </div>
+                <div className="d-flex justify-content-center">
+                    <p>12,341 Reviews</p>
+                </div>
           </div>
-        </div>
-        <div className="row m-5 justify-content-center">
-          <div className="col-lg-6">
+        
+        <div className="mt-5">
+          <div className="">
             <h6 className="text-center">
               “ For years I was having trouble with acne flair ups, and my
               dermatologist had continued recommending different combinations of
@@ -98,10 +104,15 @@ const About: React.FC<AboutProps> = (props) => {
               before I add a new product to my routine! ”
             </h6>
             <br></br>
-            <p>- - Spencer D. </p>
+            <p className="d-flex justify-content-end">- - Spencer D. </p>
           </div>
-        </div>
+          </div>
+          </div>
       </div>
+
+
+{/* divider */}
+
       <div
         className="h-75 bg-primary background-tint-secondary product-logos"
         style={{
@@ -143,21 +154,6 @@ const About: React.FC<AboutProps> = (props) => {
           <div className="col-lg-3 d-flex justify-content-center">
           <div className="card team-card">
               <img
-                src="../photos/JuwanRobinson.jpg"
-                className="card-img-top headshots-about shadow"
-                alt="..."
-              />
-              <div className="card-body team-name">
-                <p className="card-text">Juwan Robinson</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row justify-content-center align-items-center mb-5">
-          <div className="col-lg-3 d-flex justify-content-center m-5">
-          <div className="card team-card">
-              <img
                 src="../photos/IB-logo.jpeg"
                 className="card-img-top headshots-about shadow"
                 alt="..."
@@ -167,6 +163,11 @@ const About: React.FC<AboutProps> = (props) => {
               </div>
             </div>
           </div>
+        
+        </div>
+
+        <div className="row justify-content-center align-items-center mb-5">
+          
           <div className="col-lg-3 d-flex justify-content-center m-5">
           <div className="card team-card">
               <img
@@ -176,6 +177,18 @@ const About: React.FC<AboutProps> = (props) => {
               />
               <div className="card-body team-name">
                 <p className="card-text">Genesis Garcia</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 d-flex justify-content-center  m-5">
+          <div className="card team-card">
+              <img
+                src="../photos/JuwanRobinson.jpg"
+                className="card-img-top headshots-about shadow"
+                alt="..."
+              />
+              <div className="card-body team-name">
+                <p className="card-text">Juwan Robinson</p>
               </div>
             </div>
           </div>
