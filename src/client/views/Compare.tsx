@@ -47,8 +47,8 @@ const Compare: React.FC<CompareProps> = () => {
 
                 </div>
             </main>
-            < Match />
             < NonMatch />
+            < Match />
         </>
     )
 

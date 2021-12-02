@@ -182,7 +182,8 @@ height: 100% !important;
 }
 .card-img-top {
 	border-radius: 20px 20px 0px 0px  !important;
-	height: 22em !important
+	height: 22em !important;
+	object-fit: scale-down !important;
 
 }
 

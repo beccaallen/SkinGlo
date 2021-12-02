@@ -31,13 +31,14 @@ const NonMatch: React.FC<NonMatchProps> = (props) => {
               <div className="card card-nonmatch justify-content-center shadow">
                 <img
                   className="card-img-top"
-                  src="../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg"
+                  src="../photos/products/t.l.c. sukari babyfacial.jpg"
                   alt="Card image cap"
+                  
                 />
                 <div className="card-body p-3">
                   <p className="card-text">
                     {" "}
-                    Product Name <br></br> <strong> Brand Name</strong>
+                    t.l.c. sukari babyfacial <br></br> <strong> Drunk Elephant</strong>
                   </p>
                 </div>
               </div>
@@ -49,13 +50,13 @@ const NonMatch: React.FC<NonMatchProps> = (props) => {
               <div className="card card-nonmatch shadow">
                 <img
                   className="card-img-top card-style"
-                  src="../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg"
+                  src="https://www.sephora.com/productimages/sku/s2222941-main-zoom.jpg?imwidth=315"
                   alt="Card image cap"
                 />
                 <div className="card-body p-3">
                   <p className="card-text">
                     {" "}
-                    Product Name <br></br> <strong> Brand Name</strong>
+                  C.E.O  antioxidant protect + repair moisturize <br></br> <strong> Sunday Riley </strong>
                   </p>
                 </div>
               </div>
