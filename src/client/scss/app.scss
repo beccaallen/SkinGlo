@@ -58,6 +58,12 @@ h2 {
 	font-size: 36px !important;
 	letter-spacing: .125rem !important;
 }
+h6 {
+	font-family: 'Be Vietnam Pro', sans-serif !important;
+	font-size: 1em !important;
+	font-weight: 400 !important;
+	line-height: 2em !important;
+}
 
 .logo-nav {
 	font-family: 'Be Vietnam Pro', sans-serif !important;
@@ -190,6 +196,41 @@ height: 100% !important;
 	border-radius: 20px !important;
 	padding: 1em !important
 }
+
+.hero-about {
+	width: 50em !important;
+	height: 30em !important;
+	object-fit: cover !important;
+	border-radius: 30px !important;
+	border: $info 10px solid !important;
+
+
+}
+
+.headshots-about {
+	-webkit-filter: grayscale(100%) !important; 
+	filter: grayscale(100%) !important;
+	height: 10em !important;
+	width: 10em !important;
+	border-radius: 50% !important;
+	object-fit: cover !important;
+
+
+}
+
+.team-card {
+	background-color: $info !important;
+	padding: 3em !important;
+	border-radius: 30px !important;
+	border: none !important
+}
+
+.team-name {
+	text-align: center !important;
+	background-color: transparent !important;
+	padding-top: 3em !important;
+}
+
 
 
 
