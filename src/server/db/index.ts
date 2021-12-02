@@ -1,6 +1,5 @@
 import * as mysql from 'mysql';
 import config from '../config';
-
 import skinglo from './skinglo';
 
 

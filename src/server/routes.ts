@@ -1,14 +1,10 @@
 import * as express from 'express';
-
 import DB from './db';
 
 const router = express.Router();
 
-// router.get('/api/hello', (req, res, next) => {
-//     res.json('World');
-// });
 
-router.get('/api/skinglo', async (req, res) => {
+router.get('/skinglo', async (req, res) => {
     try {
         let skinglo = await DB.skinglo.all();
         res.json(skinglo);
