@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = (props) => {
           </h1>
           <p className="m-5">
             At SkinGlo, we understand how overwhelming it can be to find the an
-            effective and soothing skincare regimine. While products may have
+            effective and soothing skincare regimin. While products may have
             ingredients list a mile-long, we wanted to create a simple interface
             that does all the work behind the scenes. Don’t stress or guess, we
             got your back and your skin!{" "}
