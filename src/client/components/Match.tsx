@@ -53,11 +53,9 @@ const Match: React.FC<MatchProps> = (props) => {
               </div>
             </div>
             <div className="row justify-content-center ">
-              <div className="col-lg-2 d-flex justify-content-center  ">
                 <button className="btn btn-info compare-btn shadow">
                   Compare More
                 </button>
-              </div>
             </div>
           </div>
         </div>

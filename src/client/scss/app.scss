@@ -98,10 +98,14 @@ a{
 	font-size: 18px !important;
 	font-weight: 400 !important
 }
+a.mx-4.link-nav.active {
+	text-decoration: underline !important;
+	text-decoration: solid underline $info 4px !important ;
+}
 .hero-text {
 	// z-index: 3 !important;
 	position: absolute !important;
-	bottom: 40%;
+	bottom: 25%;
 	left:  15%;
 	right: 15%;
 	justify-content: center !important;
@@ -121,6 +125,7 @@ height: 100% !important;
 .background-tint-primary {
 	background-color: $primary; /* Tint color */
 	background-blend-mode:multiply;
+
   }
 .background-tint-info {
 	background-color: $info; /* Tint color */
@@ -136,10 +141,11 @@ height: 100% !important;
   }
 
   .compare-btn {
-	  height: 80 px !important;
+	  width: 15em !important;
 	  padding: 1em !important;
 	  border-radius: 15px !important;
 	  font-family: 'Be Vietnam Pro', sans-serif !important;
+	  align-items: center !important;
 	}
 
   .ampersand {
@@ -232,9 +238,24 @@ height: 100% !important;
 	padding-top: 3em !important;
 }
 
+#carousel-item{
+	height: min-content !important;
+	object-fit: cover !important;
+}
 
-
-
+.carousel-item-next{
+	transition: transform 0s ease-in-out !important;
+  }
+  
+  .carousel-item-prev{
+	  transition: transform 0s ease-in-out !important;
+  }
+  .carousel-item-left {
+	  transform: translateX(-100%) !important;
+  }
+  .carousel-item-right {
+	  transform: translateX(100%) !important;
+  }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,600&family=Shippori+Antique+B1&display=swap');
