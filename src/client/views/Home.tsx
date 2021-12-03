@@ -1,19 +1,22 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import HeroSlider from "../components/HeroSlider";
 
 const Home: React.FC<HomeProps> = () => {
   return (
     <main className="container-fluid">
-      <div className="row h-75 hero-slider">
-        <div className="col-lg-6 bg-primary background-tint-primary bg-opacity-100 " style={{
-          backgroundImage: `url("../photos/sam-limon-g5oq-wH71OQ-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
-        }}>
+      {/* < HeroSlider /> */}
+        <div className="row h-75 hero-slider">
+          <div className="col-lg-6 bg-primary background-tint-primary bg-opacity-100 " style={{
+            backgroundImage: `url("../photos/sam-limon-g5oq-wH71OQ-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
+          }}>
+          </div>
+          <div className="col-lg-6 bg-info background-tint-info" style={{
+            backgroundImage: `url("../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
+          }}>
+          </div>
         </div>
-        <div className="col-lg-6 bg-info background-tint-info" style={{
-          backgroundImage: `url("../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
-        }}>
-        </div>
-      </div>
+      
       <div className="row hero-text">
         <div className="col-lg-5 text-center">
           <h1 className="text-light p-3">Get to Glo!</h1>

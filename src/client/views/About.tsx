@@ -114,7 +114,7 @@ const About: React.FC<AboutProps> = (props) => {
 {/* divider */}
 
       <div
-        className="h-75 bg-primary background-tint-secondary product-logos"
+        className="bg-primary background-tint-secondary product-logos"
         style={{
           backgroundImage: `url("../photos/bg-meettheteam.jpeg")`,
           backgroundSize: "cover",
@@ -166,9 +166,9 @@ const About: React.FC<AboutProps> = (props) => {
         
         </div>
 
-        <div className="row justify-content-center align-items-center mb-5">
+        <div className="row justify-content-center align-items-center pb-5">
           
-          <div className="col-lg-3 d-flex justify-content-center m-5">
+          <div className="col-lg-3 d-flex justify-content-center">
           <div className="card team-card">
               <img
                 src="../photos/GenesisGarcia.JPG"
@@ -180,7 +180,7 @@ const About: React.FC<AboutProps> = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 d-flex justify-content-center  m-5">
+          <div className="col-lg-3 d-flex justify-content-center">
           <div className="card team-card">
               <img
                 src="../photos/JuwanRobinson.jpg"
