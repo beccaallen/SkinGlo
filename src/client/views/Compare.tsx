@@ -3,48 +3,98 @@ import { useEffect, useState } from "react";
 import Match from "../components/Match";
 import NonMatch from "../components/NonMatch";
 import SearchBar from "../components/SearchBar";
+import SearchBar2 from "../components/SearchBar2";
 
 const Compare: React.FC<CompareProps> = () => {
+  // const handleSubmit = () => {
+  //     if ()
+  // }
+  const [products, setProducts] = useState([]);
+  const [SearchList, setSearchList] = useState([]);
+  const [SearchList2, setSearchList2] = useState([]);
+  const [fieldSearch, setFieldSearch] = useState("");
+  const [fieldSearch2, setFieldSearch2] = useState("");
 
-    // const handleSubmit = () => {
-    //     if ()
-    // }
+  useEffect(() => {
+    fetch("/api/products")
+      .then((res) => res.json())
+      .then((products) => setProducts(products));
+  }, []);
 
-    
-    return (
-        <>
-    {/* path for image is from public/js/app.js to public/photos/products */}
+  useEffect(() => {
+    const filteredList = filterFieldSearch();
+    setSearchList(filteredList);
+  }, [fieldSearch]);
 
-        {/* <img src={} alt="" /> */}
-            <main className="container-fluid">
-                <div className="row h-100 justify-content-center align-items-center" style={{
-                    backgroundImage: `url("../photos/bg-compare.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
-                }}>
-                    <div className="p-5">
-                        <div className="d-flex h-75 bg-primary bg-opacity-75 align-items-center justify-content-center">
+  useEffect(() => {
+    const filteredList = filterFieldSearch2();
+    setSearchList2(filteredList);
+  }, [fieldSearch2]);
 
-                            <div className="row d-flex justify-content-center align-items-center p-5">
-                             
-                            <SearchBar/>
+  const filterFieldSearch = () => {
+    return products.filter((product) => {
+      product.name.includes(fieldSearch.toLowerCase());
+    });
+  };
 
-                                <div className="row d-flex justify-content-center m-5 py-5">
-                                    <button className="col-lg-3 col-md-2 btn btn-info compare-btn  shadow m-3 ">See if it's a match</button>
-                                </div>
-                            </div>
+  const filterFieldSearch2 = () => {
+    return products.filter((product) => {
+      product.name.includes(fieldSearch2.toLowerCase());
+    });
+  };
+console.log(SearchList)
+  return (
+    <>
+      <main className="container-fluid">
+        <div
+          className="row h-100 justify-content-center align-items-center"
+          style={{
+            backgroundImage: `url("../photos/bg-compare.jpeg")`,
+            backgroundSize: "cover",
+            backgroundPositionY: "center",
+            backgroundPositionX: "center",
+          }}
+        >
+          <div className="p-5">
+            <div className="d-flex h-75 bg-primary bg-opacity-75 align-items-center justify-content-center">
+              <div className="row d-flex justify-content-center align-items-center p-5">
+                <div className="d-flex justify-content-center align-items-center">
+                  <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center">
+                    <SearchBar
+                      placeholder={"Search"}
+                      handleChange={(e: any) => setFieldSearch(e.target.value)}
+                      fitlerResults={SearchList}
+                    />
+                  </div>
 
-                        </div>
-                    </div>
+                  <div className="col-lg-4 col-md-2 d-flex justify-content-center">
+                    <div className="text-center ampersand text-white">&</div>
+                  </div>
 
+                  <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center">
+                    <SearchBar
+                      placeholder="Search"
+                      handleChange={(e: any) => setFieldSearch2(e.target.value)}
+                      fitlerResults= {SearchList2}
+                    />
+                  </div>
                 </div>
-            </main>
-            < NonMatch />
-            < Match />
-        </>
-    )
+                <div className="row d-flex justify-content-center m-5 py-5">
+                  <button className="col-lg-3 col-md-2 btn btn-info compare-btn shadow m-3 ">
+                    See if it's a match
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <NonMatch />
+      <Match />
+    </>
+  );
+};
 
-}
-
-
-interface CompareProps { }
+interface CompareProps {}
 
 export default Compare;
