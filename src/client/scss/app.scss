@@ -94,6 +94,10 @@ a {
 }
 a.mx-4.link-nav.active {
   text-decoration: underline !important;
+  text-decoration: solid underline $primary 4px !important ;
+}
+a:-webkit-any-link:hover {
+  text-decoration: underline !important;
   text-decoration: solid underline $info 4px !important ;
 }
 .hero-text {
