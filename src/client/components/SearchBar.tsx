@@ -14,10 +14,13 @@ const SearchBar: React.FC<SearchBarProps> = (props) => {
           placeholder={props.placeholder}
           aria-label="Search"
         />
-        <div className="dataResults">
-                {(props.fitlerResults).map((names: string) =>{
+        <div className="dropdown">
+                {(props.filterResults).map((names:any , key:number) =>{
                     return (
-                        <p>{names}</p>
+                        <div className= "dropdown-content"  key={`search-item-${names.id}`} onClick={props.setProduct}>
+                          <p><strong>{names.name}</strong></p>
+                          <p>{names.brand}</p>
+                        </div>
                     )
 
                 })}
@@ -31,7 +34,8 @@ const SearchBar: React.FC<SearchBarProps> = (props) => {
 interface SearchBarProps {
   handleChange: any;
   placeholder: any;
-  fitlerResults: any;
+  filterResults: any;
+  setProduct: any
 }
 
 export default SearchBar;

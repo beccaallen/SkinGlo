@@ -23,26 +23,31 @@ const Compare: React.FC<CompareProps> = () => {
 
   useEffect(() => {
     const filteredList = filterFieldSearch();
-    setSearchList(filteredList);
+    setSearchList(filteredList.slice(0, 3));
   }, [fieldSearch]);
 
   useEffect(() => {
     const filteredList = filterFieldSearch2();
-    setSearchList2(filteredList);
+    setSearchList2(filteredList.slice(0, 3));
   }, [fieldSearch2]);
 
   const filterFieldSearch = () => {
+  
     return products.filter((product) => {
-      product.name.includes(fieldSearch.toLowerCase());
+      return product.name.includes(fieldSearch.toLowerCase());
+    
     });
+    
   };
 
   const filterFieldSearch2 = () => {
     return products.filter((product) => {
-      product.name.includes(fieldSearch2.toLowerCase());
+      return product.name.includes(fieldSearch2.toLowerCase());
     });
   };
 console.log(SearchList)
+console.log(fieldSearch)
+console.log(filterFieldSearch())
   return (
     <>
       <main className="container-fluid">
@@ -59,11 +64,13 @@ console.log(SearchList)
             <div className="d-flex h-75 bg-primary bg-opacity-75 align-items-center justify-content-center">
               <div className="row d-flex justify-content-center align-items-center p-5">
                 <div className="d-flex justify-content-center align-items-center">
-                  <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center">
+                  <div className="col-lg-4 col-md-2 col-sm-1 justify-content-center">
                     <SearchBar
+                  
                       placeholder={"Search"}
                       handleChange={(e: any) => setFieldSearch(e.target.value)}
-                      fitlerResults={SearchList}
+                      filterResults={SearchList}
+                      setProduct={""}
                     />
                   </div>
 
@@ -75,7 +82,8 @@ console.log(SearchList)
                     <SearchBar
                       placeholder="Search"
                       handleChange={(e: any) => setFieldSearch2(e.target.value)}
-                      fitlerResults= {SearchList2}
+                      filterResults= {SearchList2}
+                      setProduct={""}
                     />
                   </div>
                 </div>
