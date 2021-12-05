@@ -95,10 +95,14 @@ a {
 a.mx-4.link-nav.active {
   text-decoration: underline !important;
   text-decoration: solid underline $primary 4px !important ;
+  text-underline-offset: .5em!important;
+
 }
-a:-webkit-any-link:hover {
+a.link-nav:-webkit-any-link:hover {
   text-decoration: underline !important;
   text-decoration: solid underline $info 4px !important ;
+  text-underline-offset: .5em !important;
+
 }
 .hero-text {
   // z-index: 3 !important;
