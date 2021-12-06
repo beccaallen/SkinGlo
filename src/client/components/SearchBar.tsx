@@ -19,7 +19,7 @@ const SearchBar: React.FC<SearchBarProps> = (props) => {
           {props.filterResults.map((names: any, key: number, id:number) => {
             return (
               <li
-                className="dropdown-content"
+                className="dropdown-content shadow"
                 key={`search-item-${names.id}`}
                 onClick={() => props.setProduct(names.name, names.brand, names.id)}
               >

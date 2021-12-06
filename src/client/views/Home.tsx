@@ -7,11 +7,11 @@ const Home: React.FC<HomeProps> = () => {
     <main className="container-fluid">
       {/* < HeroSlider /> */}
         <div className="row h-75 hero-slider">
-          <div className="col-lg-6 bg-primary background-tint-primary bg-opacity-100 " style={{
+          <div className="col-lg-6 bg-primary background-tint-primary-home bg-opacity-100 " style={{
             backgroundImage: `url("../photos/sam-limon-g5oq-wH71OQ-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
           }}>
           </div>
-          <div className="col-lg-6 bg-info background-tint-info" style={{
+          <div className="col-lg-6 bg-info background-tint-info-home" style={{
             backgroundImage: `url("../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
           }}>
           </div>
