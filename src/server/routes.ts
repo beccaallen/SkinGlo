@@ -1,4 +1,5 @@
 import * as express from 'express';
+import { RouteChildrenProps } from 'react-router-dom';
 import fetch from "node-fetch";
 import DB from './db';
 
@@ -25,6 +26,18 @@ router.get('/skinglo/photo/:api_id', async (req, res) => {
     }    
 });
 
+router.get("/skinglo/conflicts/:ingredientOneID&:ingredientTwoID", async (req, res) => {
+    try {
+        const ingredientOneID = req.params.ingredientOneID;
+        const ingredientTwoID = req.params.ingredientTwoID;
+
+        let conflicts = await DB.skinglo.getConflicts(ingredientOneID, ingredientTwoID);
+        res.json(conflicts);
+    } catch (error) {
+        console.log(e);
+        res.status(500).send(error);
+    }
+});
 router.get("/products", async (req, res) => {
     try {
         let skinglo = await fetch("https://skincare-api.herokuapp.com/products");
