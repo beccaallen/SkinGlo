@@ -4,7 +4,7 @@ const SearchBar: React.FC<SearchBarProps> = (props) => {
   return (
     <div>
       <label className="py-3">
-        <strong>1st</strong> Product
+        <strong>Select</strong> Product
       </label>
       <div className="searchInputs">
         <input
