@@ -139,6 +139,11 @@ a.link-nav:-webkit-any-link:hover {
   background-blend-mode: multiply;
 }
 
+.bg-compare-tint {
+  background-color: $light !important; /* Tint color */
+  background-blend-mode:soft-light !important;
+}
+
 .compare-btn {
   width: 15em !important;
   padding: 1em !important;
@@ -192,6 +197,12 @@ label {
   align-items: center !important;
 }
 
+.searchContainer {
+  margin-top: 7em !important;
+  height: 20em !important;
+}
+
+
 .search-bar {
   width: 25em !important;
   height: 5em !important;
@@ -203,6 +214,8 @@ label {
 }
 
 .dropdown {
+  position: relative !important;
+  top: 5em !important;
   display: inline-block !important;
   width: 25em !important;
   border-radius: 20px !important;
@@ -217,6 +230,14 @@ label {
   min-width: 230px !important;
   z-index: 1 !important;
   background-color: $light !important;
+  padding: 1em !important;
+
+}
+.dropdown-content:hover {
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  min-width: 230px !important;
+  z-index: 1 !important;
+  background-color: $info !important;
   padding: 1em !important;
 
 }

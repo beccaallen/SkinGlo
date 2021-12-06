@@ -52,7 +52,7 @@ console.log(filterFieldSearch())
     <>
       <main className="container-fluid">
         <div
-          className="row h-100 justify-content-center align-items-center"
+          className="row h-100 justify-content-center align-items-center bg-compare-tint"
           style={{
             backgroundImage: `url("../photos/bg-compare.jpeg")`,
             backgroundSize: "cover",
@@ -64,7 +64,7 @@ console.log(filterFieldSearch())
             <div className="d-flex h-75 bg-primary bg-opacity-75 align-items-center justify-content-center">
               <div className="row d-flex justify-content-center align-items-center p-5">
                 <div className="d-flex justify-content-center align-items-center">
-                  <div className="col-lg-4 col-md-2 col-sm-1 justify-content-center">
+                  <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center searchContainer">
                     <SearchBar
                   
                       placeholder={"Search"}
@@ -78,7 +78,7 @@ console.log(filterFieldSearch())
                     <div className="text-center ampersand text-white">&</div>
                   </div>
 
-                  <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center">
+                  <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center searchContainer">
                     <SearchBar
                       placeholder="Search"
                       handleChange={(e: any) => setFieldSearch2(e.target.value)}
