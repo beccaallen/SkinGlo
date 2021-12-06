@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 const About: React.FC<AboutProps> = (props) => {
   return (
@@ -25,10 +25,10 @@ const About: React.FC<AboutProps> = (props) => {
         </div>
       </div>
 
-{/* divider */}
+      {/* divider */}
 
       <div className="row d-flex justify-content-center m-5">
-          <div className="col-lg-6 d-flex flex-column justify-content-center">
+        <div className="col-lg-6 d-flex flex-column justify-content-center">
           <div className="d-flex justify-content-center" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,14 +82,64 @@ const About: React.FC<AboutProps> = (props) => {
             </svg>
           </div>
           <div  >
-                <div className="d-flex justify-content-center">
-                    <h6>4.7 out of 5 </h6>
-                </div>
-                <div className="d-flex justify-content-center">
-                    <p>12,341 Reviews</p>
-                </div>
+            <div className="d-flex justify-content-center">
+              <h6>4.7 out of 5 </h6>
+            </div>
+            <div className="d-flex justify-content-center">
+              <p>12,341 Reviews</p>
+            </div>
           </div>
-        
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h6 className="text-center">
+                  “ For years I was having trouble with acne flair ups, and my
+                  dermatologist had continued recommending different combinations of
+                  facial cleansers, moisturizers, exfoliates, etc. along with
+                  prescriptive solutions as well. However, my flair ups persisted,
+                  and it wasn’t until I started comparing my products using SkinGlo
+                  that I realized the issue was using these products together.
+                  SkinGlo has helped me become more aware of the reactions my
+                  products have when used with each other, and I always use SkinGlo
+                  before I add a new product to my routine! ”
+                </h6>
+                <br></br>
+                <p className="d-flex justify-content-end">- - Spencer D. </p>
+              </div>
+              <div class="carousel-item">
+                <h6 className="text-center">
+                  “ I have never been very knowledgeable of the proper skincare.
+                  Now, that I'm older, taking care of my skin is definitely of
+                  high importance. Thanks to SkinGlo, I am able to easily pick the
+                  right products for my skin. ”
+                </h6>
+                <br></br>
+                <p className="d-flex justify-content-end">- - K. Lanice </p>
+              </div>
+              <div class="carousel-item">
+                <h6 className="text-center">
+                  “ Thanks SkinGlo for making this process effortless! You have
+                  drastically reduced the amount of time it takes me to find the
+                  right products. Now, I don't have to do so much research when
+                  working with my clients. I can just visit this site and find
+                  what I need in seconds!!! ”
+                </h6>
+                <br></br>
+                <p className="d-flex justify-content-end">- - Carol W. </p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          {/* 
         <div className="mt-5">
           <div className="">
             <h6 className="text-center">
@@ -104,14 +154,35 @@ const About: React.FC<AboutProps> = (props) => {
               before I add a new product to my routine! ”
             </h6>
             <br></br>
-            <p className="d-flex justify-content-end">- - Spencer D. </p>
-          </div>
-          </div>
-          </div>
+              <p className="d-flex justify-content-end">- - Spencer D. </p>
+            </div>
+            <div className="">
+              <h6 className="text-center">
+                “ I have never been very knowledgeable of the proper skincare.
+                Now, that I'm older, taking care of my skin is definitely of
+                high importance. Thanks to SkinGlo, I am able to easily pick the
+                right products for my skin. ”
+              </h6>
+              <br></br>
+              <p className="d-flex justify-content-end">- - K. Lanice </p>
+            </div>
+            <div className="">
+              <h6 className="text-center">
+                “ Thanks SkinGlo for making this process effortless! You have
+                drastically reduced the amount of time it takes me to find the
+                right products. Now, I don't have to do so much research when
+                working with my clients. I can just visit this site and find
+                what I need in seconds!!! ”
+              </h6>
+              <br></br>
+              <p className="d-flex justify-content-end">- - Carol W. </p>
+            </div>
+            </div> */}
+        </div>
       </div>
 
 
-{/* divider */}
+      {/* divider */}
 
       <div
         className="bg-primary background-tint-secondary product-logos"
@@ -140,7 +211,7 @@ const About: React.FC<AboutProps> = (props) => {
             </div>
           </div>
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/KyeJuanaAvery.jpg"
                 className="card-img-top headshots-about shadow"
@@ -152,7 +223,7 @@ const About: React.FC<AboutProps> = (props) => {
             </div>
           </div>
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/IB-logo.jpeg"
                 className="card-img-top headshots-about shadow"
@@ -163,13 +234,13 @@ const About: React.FC<AboutProps> = (props) => {
               </div>
             </div>
           </div>
-        
+
         </div>
 
         <div className="row justify-content-center align-items-center pb-5">
-          
+
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/GenesisGarcia.JPG"
                 className="card-img-top headshots-about shadow"
@@ -181,7 +252,7 @@ const About: React.FC<AboutProps> = (props) => {
             </div>
           </div>
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/JuwanRobinson.jpg"
                 className="card-img-top headshots-about shadow"
@@ -198,6 +269,6 @@ const About: React.FC<AboutProps> = (props) => {
   );
 };
 
-interface AboutProps {}
+interface AboutProps { }
 
 export default About;
