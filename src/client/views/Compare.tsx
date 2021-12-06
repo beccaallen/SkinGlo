@@ -1,10 +1,11 @@
-import { VisibilityOff } from "@material-ui/icons";
+import { Visibility, VisibilityOff } from "@material-ui/icons";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import Match from "../components/Match";
 import NonMatch from "../components/NonMatch";
 import SearchBar from "../components/SearchBar";
-import SearchBar2 from "../components/SearchBar2";
+
+
 
 const Compare: React.FC<CompareProps> = () => {
   const [products, setProducts] = useState([]);
@@ -16,7 +17,10 @@ const Compare: React.FC<CompareProps> = () => {
   const [product2, setProduct2] = useState([]);
   const [searchValue, setSearchValue] = useState(null)
   const [searchValue2, setSearchValue2] = useState(null)
-
+  const [homeView, setHomeView] = useState("visible")
+  const [matchView, setMatchView] = useState(true)
+  const [nonMatchView, setNonMatchView] = useState(true)
+ 
   useEffect(() => {
     fetch("/api/products")
       .then((res) => res.json())
@@ -64,29 +68,39 @@ const Compare: React.FC<CompareProps> = () => {
 
 
   };
+  const homeStyle = {
+    visibility: {homeView},
+ 
+  };
+  
 
   const handleMatch = () => {
     console.log(product1)
     console.log(product2)
+    setHomeView("hidden")
 
-    
- 
+  
   }
+
+
+  
+  
 
   return (
     <>
-      <main className="container-fluid compare-view">
+      <main className="container-fluid" >
         <div
           className="row h-100 justify-content-center align-items-center bg-compare-tint"
           style={{
-            backgroundImage: `url("../photos/bg-compare.jpeg")`,
+            backgroundImage: `url("../photos/desaturated_compare-bg.jpg")`,
             backgroundSize: "cover",
             backgroundPositionY: "center",
             backgroundPositionX: "center",
+            
           }}
         >
-          <div className="p-5">
-            <div className="d-flex h-75 bg-primary bg-opacity-75 align-items-center justify-content-center">
+          <div className="p-5 " >
+            <div className="d-flex h-75 bg-light align-items-center justify-content-center bg-opacity-75">
               <div className="row d-flex justify-content-center align-items-center p-5">
                 <div className="d-flex justify-content-center align-items-center">
                   <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center searchContainer">
@@ -100,7 +114,7 @@ const Compare: React.FC<CompareProps> = () => {
                   </div>
 
                   <div className="col-lg-4 col-md-2 d-flex justify-content-center">
-                    <div className="text-center ampersand text-white">&</div>
+                    <div className="text-center ampersand text-secondary">&</div>
                   </div>
 
                   <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center searchContainer">
@@ -130,6 +144,7 @@ const Compare: React.FC<CompareProps> = () => {
   );
 };
 
-interface CompareProps {}
+interface CompareProps {
+}
 
 export default Compare;

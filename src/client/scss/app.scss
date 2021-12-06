@@ -124,23 +124,29 @@ a.link-nav:-webkit-any-link:hover {
 }
 .background-tint-primary {
   background-color: $primary; /* Tint color */
-  background-blend-mode: multiply;
+  background-blend-mode: soft-light;
 }
 .background-tint-info {
   background-color: $info; /* Tint color */
+  background-blend-mode: soft-light;
+}
+.background-tint-primary-home {
+  background-color: $primary; /* Tint color */
   background-blend-mode: multiply;
 }
-.background-tint-secondary {
+.background-tint-info-home {
   background-color: $info; /* Tint color */
   background-blend-mode: multiply;
 }
+
+
 .background-tint-secondary {
-  background-color: $success; /* Tint color */
-  background-blend-mode: multiply;
+  background-color: $secondary; /* Tint color */
+  background-blend-mode: soft-light;
 }
 
 .bg-compare-tint {
-  background-color: $light !important; /* Tint color */
+  background-color: $primary !important; /* Tint color */
   background-blend-mode:soft-light !important;
 }
 
@@ -154,7 +160,7 @@ a.link-nav:-webkit-any-link:hover {
 
 .ampersand {
   font-family: "Abril Fatface", cursive !important;
-  font-size: 72px !important;
+  font-size: 8em !important;
   color: $secondary !important;
 }
 
@@ -164,7 +170,7 @@ label {
 }
 
 .card-body {
-  background-color: $secondary !important;
+  background-color: $primary !important;
   color: $light !important;
   font-family: "Be Vietnam Pro", sans-serif !important;
 }
@@ -193,10 +199,6 @@ label {
   object-fit: scale-down !important;
 }
 
-// .compare-view {
-//   visibility: ;
-// }
-
 .compare-form {
   align-items: center !important;
 }
@@ -210,6 +212,7 @@ label {
 .search-bar {
   width: 25em !important;
   height: 5em !important;
+  border: 3em !important;
   border-radius: 20px !important;
   padding: 1em !important;
   position: absolute !important;
@@ -219,9 +222,10 @@ label {
 
 .dropdown {
   position: relative !important;
-  top: 5em !important;
+  top: 4em !important;
   display: inline-block !important;
   width: 25em !important;
+  border: none !important;
   border-radius: 20px !important;
   padding: 1em !important;
 }
