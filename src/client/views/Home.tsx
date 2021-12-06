@@ -1,19 +1,22 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import HeroSlider from "../components/HeroSlider";
 
 const Home: React.FC<HomeProps> = () => {
   return (
     <main className="container-fluid">
-      <div className="row h-75 hero-slider">
-        <div className="col-lg-6 bg-primary background-tint-primary bg-opacity-100 " style={{
-          backgroundImage: `url("../photos/sam-limon-g5oq-wH71OQ-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
-        }}>
+      {/* < HeroSlider /> */}
+        <div className="row h-75 hero-slider">
+          <div className="col-lg-6 bg-primary background-tint-primary-home bg-opacity-100 " style={{
+            backgroundImage: `url("../photos/sam-limon-g5oq-wH71OQ-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
+          }}>
+          </div>
+          <div className="col-lg-6 bg-info background-tint-info-home" style={{
+            backgroundImage: `url("../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
+          }}>
+          </div>
         </div>
-        <div className="col-lg-6 bg-info background-tint-info" style={{
-          backgroundImage: `url("../photos/jocelyn-morales-JiqTLjzEH18-unsplash.jpg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
-        }}>
-        </div>
-      </div>
+      
       <div className="row hero-text">
         <div className="col-lg-5 text-center">
           <h1 className="text-light p-3">Get to Glo!</h1>
@@ -39,10 +42,11 @@ const Home: React.FC<HomeProps> = () => {
           <h6>Identify conflicting ingredients</h6>
           <br></br>
           <p>
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
-            sit amet luctus venenatis lectus magna fringilla urna.
+            Products often have many unknown ingredients, with names that are hard to pronounce.
+            Making it difficult for everday consumers, to figure out which products will work best. 
+           
           </p>
+
         </div>
         <div className="col-lg-3 p-5 mx-5  text-center">
           <span className="p-4">
@@ -62,9 +66,9 @@ const Home: React.FC<HomeProps> = () => {
           <br></br>
 
           <p>
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
-            sit amet luctus venenatis lectus magna fringilla urna.
+          Identifying which ingredients are not compatible is key to an excellent skin care regimen.
+          We make it easier for everday consumers, by having 2,000+ products that can 
+          be checked for compatibility!
           </p>
         </div>
         <div className="col-lg-3 p-5 mx-5  text-center">
@@ -84,19 +88,19 @@ const Home: React.FC<HomeProps> = () => {
           <br></br>
 
           <p>
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
-            sit amet luctus venenatis lectus magna fringilla urna.
+            We take the guesswork out of skincare, making it easier to build an effective regimen and educate on 
+            why certain products do not pair well together. 
           </p>
         </div>
       </div>
-      <div className="h-75 bg-primary background-tint-secondary product-logos" style={{
+      <div className="h-75 bg-primary background-tint-primary product-logos bg-primary bg-opacity-75" style={{
         backgroundImage: `url("../photos/bg-logos.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
       }}>
-        <div className="row bg-primary bg-opacity-75 align-items-center">
-          <h2 className="text-dark m-5">compare 2,000+ products</h2>
+        <div className="row align-items-center">
+          <h2 className="text-dark text-center
+           m-5">compare 2,000+ products</h2>
         </div>
-        <div className="row justify-content-center align-items-center h-50">
+        <div className="row justify-content-center align-items-center h-50 bg-primary bg-opacity-75">
           <div className="col-lg-3 d-flex justify-content-center">
             <img src="../photos/Keihls.png" alt="Keihl's Logo" height="100px" />
           </div>
@@ -107,7 +111,7 @@ const Home: React.FC<HomeProps> = () => {
             <img src="../photos/DrunkElephant-logo.png" alt="Drunk Elephant Logo" height="130px" />
           </div>
         </div>
-        <div className="row justify-content-center align-items-center mb-5">
+        <div className="row justify-content-center align-items-center mb-5 bg-primary bg-opacity-75">
           <div className="col-lg-3 d-flex justify-content-center m-5">
             <img src="../photos/ElishaCoy-logo.png" alt="Elisha Coy Logo" height="60px" />
           </div>

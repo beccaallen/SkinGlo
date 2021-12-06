@@ -1,5 +1,6 @@
 import * as express from 'express';
 import { RouteChildrenProps } from 'react-router-dom';
+import fetch from "node-fetch";
 import DB from './db';
 
 const router = express.Router();
@@ -37,5 +38,15 @@ router.get("/skinglo/conflicts/:ingredientOneID&:ingredientTwoID", async (req, r
         res.status(500).send(error);
     }
 });
+router.get("/products", async (req, res) => {
+    try {
+        let skinglo = await fetch("https://skincare-api.herokuapp.com/products");
+        const data = await skinglo.json();
+        res.json(data);
+    } catch(e) {
+        console.log(e);
+        res.sendStatus(500);
+    }  
+})
 
 export default router;
