@@ -159,7 +159,7 @@ const About: React.FC<AboutProps> = (props) => {
                 alt="..."
               />
               <div className="card-body team-name">
-                <p className="card-text">Cameron Buchanon</p>
+                <p className="card-text">Cameron Buchanan</p>
               </div>
             </div>
           </div>
