@@ -88,7 +88,7 @@ const Home: React.FC<HomeProps> = () => {
           <br></br>
 
           <p>
-            We take the guesswork out of skincare, making it easier to build an effective regimen and help you understand 
+            We take the guesswork out of skincare, making it easier to build an effective regimen and educate on 
             why certain products do not pair well together. 
           </p>
         </div>
