@@ -42,10 +42,11 @@ const Home: React.FC<HomeProps> = () => {
           <h6>Identify conflicting ingredients</h6>
           <br></br>
           <p>
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
-            sit amet luctus venenatis lectus magna fringilla urna.
+            Products often have many unknown ingredients, with names that are hard to pronounce.
+            Making it difficult for everday consumers, to figure out which products will work best. 
+           
           </p>
+
         </div>
         <div className="col-lg-3 p-5 mx-5  text-center">
           <span className="p-4">
@@ -65,9 +66,9 @@ const Home: React.FC<HomeProps> = () => {
           <br></br>
 
           <p>
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
-            sit amet luctus venenatis lectus magna fringilla urna.
+          Identifying which ingredients are not compatible is key to an excellent skin care regimen.
+          We make it easier for everday consumers, by having 2,000+ products that can 
+          be checked for compatibility!
           </p>
         </div>
         <div className="col-lg-3 p-5 mx-5  text-center">
@@ -87,9 +88,8 @@ const Home: React.FC<HomeProps> = () => {
           <br></br>
 
           <p>
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Lobortis feugiat vivamus at augue eget. Purus
-            sit amet luctus venenatis lectus magna fringilla urna.
+            We take the guesswork out of skincare, making it easier to build an effective regimen and educate on 
+            why certain products do not pair well together. 
           </p>
         </div>
       </div>
