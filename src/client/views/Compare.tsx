@@ -7,7 +7,9 @@ import SearchBar from "../components/SearchBar";
 
 
 
-const Compare: React.FC<CompareProps> = () => {
+const Compare: React.FC<CompareProps> = (props) => {
+  // const see = "visible"
+  // const dontSee = "hidden"
   const [products, setProducts] = useState([]);
   const [SearchList, setSearchList] = useState([]);
   const [SearchList2, setSearchList2] = useState([]);
@@ -17,9 +19,9 @@ const Compare: React.FC<CompareProps> = () => {
   const [product2, setProduct2] = useState([]);
   const [searchValue, setSearchValue] = useState(null)
   const [searchValue2, setSearchValue2] = useState(null)
-  const [homeView, setHomeView] = useState("visible")
-  const [matchView, setMatchView] = useState(true)
-  const [nonMatchView, setNonMatchView] = useState(true)
+  const [homeView, setHomeView] = useState(true)
+  const [matchView, setMatchView] = useState(false)
+  const [nonMatchView, setNonMatchView] = useState(false)
  
   useEffect(() => {
     fetch("/api/products")
@@ -68,29 +70,24 @@ const Compare: React.FC<CompareProps> = () => {
 
 
   };
-  const homeStyle = {
-    visibility: {homeView},
- 
-  };
-  
 
   const handleMatch = () => {
-    console.log(product1)
-    console.log(product2)
-    setHomeView("hidden")
-
+    setHomeView(false)
+    setMatchView(true)
   
   }
 
 
+
   
-  
+  if (homeView) {
 
   return (
+ 
     <>
       <main className="container-fluid" >
         <div
-          className="row h-100 justify-content-center align-items-center bg-compare-tint"
+          className="row h-100 justify-content-center align-items-center bg-compare-tint bg-opacity-75"
           style={{
             backgroundImage: `url("../photos/desaturated_compare-bg.jpg")`,
             backgroundSize: "cover",
@@ -138,13 +135,23 @@ const Compare: React.FC<CompareProps> = () => {
           </div>
         </div>
       </main>
-      <NonMatch />
-      <Match />
+    
     </>
   );
+} else if ((matchView)) { 
+  return (
+    <Match />
+  )
+
+} else if ((nonMatchView)) {
+  return (
+    <NonMatch />
+  )
+
+}
+ 
 };
 
-interface CompareProps {
-}
+interface CompareProps {}
 
 export default Compare;
