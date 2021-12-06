@@ -193,6 +193,10 @@ label {
   object-fit: scale-down !important;
 }
 
+// .compare-view {
+//   visibility: ;
+// }
+
 .compare-form {
   align-items: center !important;
 }
@@ -247,6 +251,11 @@ label {
   z-index: 1 !important;
   background-color: $light !important;
   padding: 1em !important;
+
+}
+
+ul {
+  list-style-type: none !important;
 
 }
 
