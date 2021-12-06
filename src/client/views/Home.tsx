@@ -93,13 +93,14 @@ const Home: React.FC<HomeProps> = () => {
           </p>
         </div>
       </div>
-      <div className="h-75 bg-primary background-tint-secondary product-logos" style={{
+      <div className="h-75 bg-primary background-tint-primary product-logos bg-primary bg-opacity-75" style={{
         backgroundImage: `url("../photos/bg-logos.jpeg")`, backgroundSize: 'cover', backgroundPositionY: 'center', backgroundPositionX: 'center'
       }}>
-        <div className="row bg-primary bg-opacity-75 align-items-center">
-          <h2 className="text-dark m-5">compare 2,000+ products</h2>
+        <div className="row align-items-center">
+          <h2 className="text-dark text-center
+           m-5">compare 2,000+ products</h2>
         </div>
-        <div className="row justify-content-center align-items-center h-50">
+        <div className="row justify-content-center align-items-center h-50 bg-primary bg-opacity-75">
           <div className="col-lg-3 d-flex justify-content-center">
             <img src="../photos/Keihls.png" alt="Keihl's Logo" height="100px" />
           </div>
@@ -110,7 +111,7 @@ const Home: React.FC<HomeProps> = () => {
             <img src="../photos/DrunkElephant-logo.png" alt="Drunk Elephant Logo" height="130px" />
           </div>
         </div>
-        <div className="row justify-content-center align-items-center mb-5">
+        <div className="row justify-content-center align-items-center mb-5 bg-primary bg-opacity-75">
           <div className="col-lg-3 d-flex justify-content-center m-5">
             <img src="../photos/ElishaCoy-logo.png" alt="Elisha Coy Logo" height="60px" />
           </div>

@@ -61,7 +61,7 @@ const NonMatch: React.FC<NonMatchProps> = (props) => {
             </div>
           </div>
           <div className="row justify-content-center ">
-              <button className="btn btn-info compare-btn shadow">
+              <button className="btn btn-info compare-btn shadow" >
                 Compare More
               </button>
           </div>

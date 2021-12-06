@@ -17,7 +17,7 @@ const Match: React.FC<MatchProps> = (props) => {
             <div className="row bg-success p-5 mx-5">
               <h2 className="text-center">It's a Match!</h2>
             </div>
-          <div className="row justify-content-center align-items-center bg-light mx-5 h-75">
+          <div className="row justify-content-center align-items-center bg-light mx-5 h-75 bg-opacity-75">
             <div className="d-flex col-lg-3 justify-content-center">
               <div className="card card-match shadow">
                 <img
