@@ -282,7 +282,7 @@ ul {
 
 .team-card {
   background-color: $info !important;
-  padding: 3em !important;
+  padding: 2em !important;
   border-radius: 30px !important;
   border: none !important;
 }
@@ -293,10 +293,10 @@ ul {
   padding-top: 3em !important;
 }
 
-#carousel-item {
-  height: min-content !important;
-  object-fit: cover !important;
+.carousel-inner{
+  height: 20em !important;
 }
+
 
 .carousel-item-next {
   transition: transform 0s ease-in-out !important;

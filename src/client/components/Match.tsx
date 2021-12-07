@@ -5,16 +5,29 @@ import { NavLink } from "react-router-dom";
 
 const Match: React.FC<MatchProps> = ({product1, product2}) => {
 
-const [photos, setPhotos] = useState([])
+  const compareMore = () => {
+    window.location.reload();
+  }
+
+  const [photo1, setPhoto1] = useState([])
+  const [photo2, setPhoto2] = useState([])
 
 
   useEffect(() => {
     fetch(`/api/skinglo/photo/${product1[2]}`)
       .then((res) => res.json())
-      .then((photos) => setPhotos(photos));
+      .then((photo) => setPhoto1(photo));
   }, []);
 
-console.log(photos[0])
+  useEffect(() => {
+    fetch(`/api/skinglo/photo/${product2[2]}`)
+      .then((res) => res.json())
+      .then((photo) => setPhoto2(photo));
+  }, []);
+
+console.log(photo1[0])
+console.log(photo2[0])
+
   return (
     <main className="container-fluid">
       <div
@@ -35,7 +48,7 @@ console.log(photos[0])
               <div className="card card-match shadow">
                 <img
                   className="card-img-top card-style"
-                  src={`../photos/products/${photos[0]}`}
+                  src={photo1[0]?.image}
                   alt="Card image cap"
                 />
                 <div className="card-body p-3">
@@ -55,7 +68,7 @@ console.log(photos[0])
               <div className="card card-match shadow">
                 <img
                   className="card-img-top card-style"
-                  src={`../photos/products/${photos[0]}`}
+                  src={photo2[0]?.image}
                   alt="Card image cap"
                 />
                 <div className="card-body p-3">
@@ -67,7 +80,7 @@ console.log(photos[0])
               </div>
             </div>
             <div className="row justify-content-center ">
-                <button className="btn btn-info compare-btn shadow">
+                <button className="btn btn-info compare-btn shadow" onClick={compareMore}>
                   Compare More
                 </button>
             </div>

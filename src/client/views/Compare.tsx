@@ -82,7 +82,7 @@ const Compare: React.FC<CompareProps> = (props) => {
   };
 
   if (nonMatchView) {
-    return <NonMatch product1={product1} product2={product2}/>
+    return <NonMatch product1={product1} product2={product2} conflict={conflicts[0]?.reason}/>
   }
   else if (matchView) {
     return <Match product1={product1} product2={product2}/>
