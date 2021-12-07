@@ -1,6 +1,14 @@
 import * as React from "react";
 
 const About: React.FC<AboutProps> = (props) => {
+
+// function moveCarousel (){
+//   document.getElementById("carouselExampleIndicators").carousel({
+//     interval: 1000
+//   })
+// }
+// React.useEffect(() => {moveCarousel()} , [])
+
   return (
     <main className="container-fluid">
       <div className="row m-5 justify-content-center">
@@ -25,10 +33,10 @@ const About: React.FC<AboutProps> = (props) => {
         </div>
       </div>
 
-{/* divider */}
+      {/* divider */}
 
       <div className="row d-flex justify-content-center m-5">
-          <div className="col-lg-6 d-flex flex-column justify-content-center">
+        <div className="col-lg-6 d-flex flex-column justify-content-center">
           <div className="d-flex justify-content-center" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,23 +90,23 @@ const About: React.FC<AboutProps> = (props) => {
             </svg>
           </div>
           <div  >
-                <div className="d-flex justify-content-center">
-                    <h6>4.7 out of 5 </h6>
-                </div>
-                <div className="d-flex justify-content-center">
-                    <p>12,341 Reviews</p>
-                </div>
+            <div className="d-flex justify-content-center">
+              <h6>4.7 out of 5 </h6>
+            </div>
+            <div className="d-flex justify-content-center">
+              <p>12,341 Reviews</p>
+            </div>
           </div>
-        
-        
 
-        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-            
-        <ol className="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol><div className="carousel-inner mt-3">
+
+
+          <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+
+            <ol className="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol><div className="carousel-inner mt-3">
               <div className="carousel-item active">
                 <h6 className="text-center">
                   “ For years I was having trouble with acne flair ups, and my
@@ -145,12 +153,12 @@ const About: React.FC<AboutProps> = (props) => {
               <span className="sr-only">Next</span>
             </a>
           </div>
-          </div>
-          </div>
-      
+        </div>
+      </div>
 
 
-{/* divider */}
+
+      {/* divider */}
 
       <div
         className="bg-primary background-tint-secondary product-logos"
@@ -179,7 +187,7 @@ const About: React.FC<AboutProps> = (props) => {
             </div>
           </div>
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/IB-logo.jpeg"
                 className="card-img-top headshots-about shadow"
@@ -191,7 +199,7 @@ const About: React.FC<AboutProps> = (props) => {
             </div>
           </div>
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/JuwanRobinson.jpg"
                 className="card-img-top headshots-about shadow"
@@ -203,13 +211,13 @@ const About: React.FC<AboutProps> = (props) => {
             </div>
 
           </div>
-        
+
         </div>
 
         <div className="row d-flex justify-content-center align-items-center my-3 pb-3">
-          
+
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/KyeJuanaAvery.jpg"
                 className="card-img-top headshots-about shadow"
@@ -219,10 +227,10 @@ const About: React.FC<AboutProps> = (props) => {
                 <p className="card-text">KyeJuana Avery</p>
               </div>
             </div>
-      
+
           </div>
           <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
+            <div className="card team-card">
               <img
                 src="../photos/GenesisGarcia.JPG"
                 className="card-img-top headshots-about shadow"
@@ -239,6 +247,6 @@ const About: React.FC<AboutProps> = (props) => {
   );
 };
 
-interface AboutProps {}
+interface AboutProps { }
 
 export default About;
