@@ -1,5 +1,4 @@
 import * as express from 'express';
-import { RouteChildrenProps } from 'react-router-dom';
 import fetch from "node-fetch";
 import DB from './db';
 
@@ -34,7 +33,7 @@ router.get("/skinglo/conflicts/:ingredientOneID&:ingredientTwoID", async (req, r
         let conflicts = await DB.skinglo.getConflicts(ingredientOneID, ingredientTwoID);
         res.json(conflicts);
     } catch (error) {
-        console.log(e);
+        console.log(error);
         res.status(500).send(error);
     }
 });
