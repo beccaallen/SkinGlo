@@ -1,7 +1,19 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const Match: React.FC<MatchProps> = (props) => {
+
+const Match: React.FC<MatchProps> = ({product1, product2}) => {
+
+const [photos, setPhotos] = useState([])
+
+
+  useEffect(() => {
+    fetch(`/api/skinglo/photo/${product1[2]}`)
+      .then((res) => res.json())
+      .then((photos) => setPhotos(photos));
+  }, []);
+console.log(photos[0])
   return (
     <main className="container-fluid">
       <div
@@ -22,13 +34,14 @@ const Match: React.FC<MatchProps> = (props) => {
               <div className="card card-match shadow">
                 <img
                   className="card-img-top card-style"
-                  src="../photos/products/AmorPacific time response eye renewal creme.jpg"
+                  src={`../photos/products/${photos[0]}`}
                   alt="Card image cap"
                 />
                 <div className="card-body p-3">
-                  <p className="card-text">
+                  <p className="card-text"
+                            >
                     {" "}
-                    Time Response Skin Renewal Serum<br></br> <strong> Amore Pacific</strong>
+                    {product1[0]}<br></br> <strong> {product1[1]}</strong>
               
                   </p>
                 </div>
@@ -41,13 +54,13 @@ const Match: React.FC<MatchProps> = (props) => {
               <div className="card card-match shadow">
                 <img
                   className="card-img-top card-style"
-                  src="https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/8098296_fpx.tif?op_sharpen=1&wid=700&fit=fit,1&$filtersm$"
+                  src={`../photos/products/${photos[0]}`}
                   alt="Card image cap"
                 />
                 <div className="card-body p-3">
                   <p className="card-text">
                     {" "}
-                    The Moisturizing Soft Cream<br></br> <strong> La Mer</strong>
+                    {product2[0]}<br></br> <strong> {product2[1]}</strong>
                   </p>
                 </div>
               </div>
@@ -64,6 +77,9 @@ const Match: React.FC<MatchProps> = (props) => {
   );
 };
 
-interface MatchProps {}
+interface MatchProps {
+  product1 :any, 
+  product2: any
+}
 
 export default Match;

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { match } from "react-router-dom";
 import Match from "../components/Match";
 import NonMatch from "../components/NonMatch";
 import SearchBar from "../components/SearchBar";
@@ -69,29 +68,24 @@ const Compare: React.FC<CompareProps> = (props) => {
       .then((res) => res.json())
       .then((conflicts) => {
         setConflicts(conflicts);
-        // setHomeView(false);
         console.log(conflicts)
 
-        if (conflicts == undefined) {
-          console.log("test")
+        if (Object.keys(conflicts).length === 0) {
           setNonMatchView(false);
           setMatchView(true);
         } else {
-          console.log("test2")
           setNonMatchView(true);
           setMatchView(false);
 
         }
       }); 
   };
-// console.log(conflicts)
-  // console.log(product1[2]);
-  // console.log(product2[2]);
+
   if (nonMatchView) {
-    return <NonMatch/>
+    return <NonMatch product1={product1} product2={product2}/>
   }
   else if (matchView) {
-    return <Match/>
+    return <Match product1={product1} product2={product2}/>
   }
   else if (homeView) {
     return (
