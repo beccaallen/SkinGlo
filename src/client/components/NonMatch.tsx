@@ -1,17 +1,29 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 
-const NonMatch: React.FC<NonMatchProps> = ({product1, product2}) => {
+const NonMatch: React.FC<NonMatchProps> = ({product1, product2, conflict}) => {
 
-  const [photos, setPhotos] = useState([])
+
+  const compareMore = () => {
+    window.location.reload();
+  }
+
+  const [photo1, setPhoto1] = useState([])
+  const [photo2, setPhoto2] = useState([])
 
 
   useEffect(() => {
     fetch(`/api/skinglo/photo/${product1[2]}`)
       .then((res) => res.json())
-      .then((photos) => setPhotos(photos));
+      .then((photo) => setPhoto1(photo));
   }, []);
-console.log(photos[0])
+
+  useEffect(() => {
+    fetch(`/api/skinglo/photo/${product2[2]}`)
+      .then((res) => res.json())
+      .then((photo) => setPhoto2(photo));
+  }, []);
+
 
   return (
 
@@ -29,11 +41,7 @@ console.log(photos[0])
           <div className="row bg-danger p-5 mx-5">
             <h2 className="text-center">It's Not a Match!</h2>
             <p className="conflict-reason text-center p-5 mx-5">
-                Because {product1[0]} contains <strong>lectus magna </strong> &
-                {product2[0]} contains <strong>fringilla urna </strong> this
-                products are noncompatible. Metus aliquam eleifend mi in nulla
-                posuere sollicitudin. Semper eget duis at tellus at urna
-                condimentum mattis.
+              {conflict}
               </p>
           </div>
         <div className="row justify-content-center align-items-center bg-light  bg-opacity-75 mx-5 h-75">
@@ -41,7 +49,7 @@ console.log(photos[0])
             <div className="card card-nonmatch shadow">
               <img
                 className="card-img-top card-style"
-                src={`${photos.image}`}
+                src={photo1[0]?.image}
                 alt="Card image cap"
               />
               <div className="card-body p-3">
@@ -60,7 +68,7 @@ console.log(photos[0])
             <div className="card card-nonmatch shadow">
               <img
                 className="card-img-top card-style"
-                src={`${photos.image}`}
+                src={photo2[0]?.image}
                 alt="Card image cap"
               />
               <div className="card-body p-3">
@@ -72,7 +80,7 @@ console.log(photos[0])
             </div>
           </div>
           <div className="row justify-content-center ">
-              <button className="btn btn-info compare-btn shadow" >
+              <button className="btn btn-info compare-btn shadow"onClick={compareMore} >
                 Compare More
               </button>
           </div>
@@ -88,6 +96,7 @@ console.log(photos[0])
 interface NonMatchProps {
   product1:any
   product2:any
+  conflict:any
 }
 
 export default NonMatch;

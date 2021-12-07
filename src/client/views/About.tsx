@@ -98,7 +98,7 @@ const About: React.FC<AboutProps> = (props) => {
         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol><div className="carousel-inner">
+    </ol><div className="carousel-inner mt-3">
               <div className="carousel-item active">
                 <h6 className="text-center">
                   “ For years I was having trouble with acne flair ups, and my
@@ -145,21 +145,6 @@ const About: React.FC<AboutProps> = (props) => {
               <span className="sr-only">Next</span>
             </a>
           </div>
-          {/* <div className="">
-            <h6 className="text-center">
-              “ For years I was having trouble with acne flair ups, and my
-              dermatologist had continued recommending different combinations of
-              facial cleansers, moisturizers, exfoliates, etc. along with
-              prescriptive solutions as well. However, my flair ups persisted,
-              and it wasn’t until I started comparing my products using SkinGlo
-              that I realized the issue was using these products together.
-              SkinGlo has helped me become more aware of the reactions my
-              products have when used with each other, and I always use SkinGlo
-              before I add a new product to my routine! ”
-            </h6>
-            <br></br>
-            <p className="d-flex justify-content-end">- - Spencer D. </p>
-          </div> */}
           </div>
           </div>
       
@@ -176,11 +161,11 @@ const About: React.FC<AboutProps> = (props) => {
           backgroundPositionX: "center",
         }}
       >
-        <div className="row bg-primary bg-opacity-75 align-items-center">
-          <h2 className="text-dark m-5">meet the team behind SkinGlo</h2>
+        <div className="row bg-primary bg-opacity-75 align-items-center my-3 pb-3">
+          <h2 className="text-dark text-center m-5">meet the team behind SkinGlo</h2>
         </div>
 
-        <div className="row d-flex justify-content-center align-items-center h-50">
+        <div className="row d-flex justify-content-center align-items-center ">
           <div className="col-lg-3 d-flex justify-content-center">
             <div className="card team-card">
               <img
@@ -196,41 +181,12 @@ const About: React.FC<AboutProps> = (props) => {
           <div className="col-lg-3 d-flex justify-content-center">
           <div className="card team-card">
               <img
-                src="../photos/KyeJuanaAvery.jpg"
-                className="card-img-top headshots-about shadow"
-                alt="..."
-              />
-              <div className="card-body team-name">
-                <p className="card-text">KyeJuana Avery</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
-              <img
                 src="../photos/IB-logo.jpeg"
                 className="card-img-top headshots-about shadow"
                 alt="..."
               />
               <div className="card-body team-name">
                 <p className="card-text">Cameron Buchanan</p>
-              </div>
-            </div>
-          </div>
-        
-        </div>
-
-        <div className="row justify-content-center align-items-center pb-5">
-          
-          <div className="col-lg-3 d-flex justify-content-center">
-          <div className="card team-card">
-              <img
-                src="../photos/GenesisGarcia.JPG"
-                className="card-img-top headshots-about shadow"
-                alt="..."
-              />
-              <div className="card-body team-name">
-                <p className="card-text">Genesis Garcia</p>
               </div>
             </div>
           </div>
@@ -243,6 +199,37 @@ const About: React.FC<AboutProps> = (props) => {
               />
               <div className="card-body team-name">
                 <p className="card-text">Juwan Robinson</p>
+              </div>
+            </div>
+
+          </div>
+        
+        </div>
+
+        <div className="row d-flex justify-content-center align-items-center my-3 pb-3">
+          
+          <div className="col-lg-3 d-flex justify-content-center">
+          <div className="card team-card">
+              <img
+                src="../photos/KyeJuanaAvery.jpg"
+                className="card-img-top headshots-about shadow"
+                alt="..."
+              />
+              <div className="card-body team-name">
+                <p className="card-text">KyeJuana Avery</p>
+              </div>
+            </div>
+      
+          </div>
+          <div className="col-lg-3 d-flex justify-content-center">
+          <div className="card team-card">
+              <img
+                src="../photos/GenesisGarcia.JPG"
+                className="card-img-top headshots-about shadow"
+                alt="..."
+              />
+              <div className="card-body team-name">
+                <p className="card-text">Genesis Garcia</p>
               </div>
             </div>
           </div>
