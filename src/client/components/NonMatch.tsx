@@ -41,7 +41,7 @@ console.log(photos[0])
             <div className="card card-nonmatch shadow">
               <img
                 className="card-img-top card-style"
-                src={`../photos/products/${photos[0]}`}
+                src={`${photos.image}`}
                 alt="Card image cap"
               />
               <div className="card-body p-3">
@@ -60,7 +60,7 @@ console.log(photos[0])
             <div className="card card-nonmatch shadow">
               <img
                 className="card-img-top card-style"
-                src={`../photos/products/${photos[0]}`}
+                src={`${photos.image}`}
                 alt="Card image cap"
               />
               <div className="card-body p-3">

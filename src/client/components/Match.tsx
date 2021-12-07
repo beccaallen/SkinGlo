@@ -13,6 +13,7 @@ const [photos, setPhotos] = useState([])
       .then((res) => res.json())
       .then((photos) => setPhotos(photos));
   }, []);
+
 console.log(photos[0])
   return (
     <main className="container-fluid">
