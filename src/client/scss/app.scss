@@ -177,14 +177,14 @@ label {
 
 .card-match {
   border-radius: 30px !important;
-  width: 22em !important;
-  height: 30em !important;
+  width: 12em !important;
+  height: 20em !important;
   border: $success 10px solid !important;
 }
 .card-nonmatch {
   border-radius: 30px !important;
-  width: 22em !important;
-  height: 30em !important;
+    width: 12em !important;
+  height: 20em !important;
   border: $danger 10px solid !important;
 }
 .card-body {
@@ -195,7 +195,7 @@ label {
 }
 .card-img-top {
   border-radius: 20px 20px 0px 0px !important;
-  height: 22em !important;
+  height: 12em !important;
   object-fit: scale-down !important;
 }
 

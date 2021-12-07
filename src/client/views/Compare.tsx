@@ -101,7 +101,7 @@ const Compare: React.FC<CompareProps> = (props) => {
             }}
           >
             <div className="p-5 ">
-              <div className="d-flex h-75 bg-light align-items-center justify-content-center bg-opacity-75">
+              <div className="d-flex bg-light align-items-center justify-content-center bg-opacity-75">
                 <div className="row d-flex justify-content-center align-items-center p-5">
                   <div className="d-flex justify-content-center align-items-center">
                     <div className="col-lg-4 col-md-2 col-sm-1 d-flex justify-content-center searchContainer">
