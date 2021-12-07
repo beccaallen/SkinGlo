@@ -25,10 +25,10 @@ body {
   justify-content: space-between !important;
   height: 100% !important;
 }
-* {
-  margin: 0 !important;
-  padding: 0 !important;
-}
+// * {
+//   margin: 0 !important;
+//   padding: 0 !important;
+// }
 
 bg-img {
   height: 100%;
@@ -55,11 +55,21 @@ h2 {
   font-size: 36px !important;
   letter-spacing: 0.125rem !important;
 }
+h3 {
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 200 !important;
+}
 h6 {
   font-family: "Be Vietnam Pro", sans-serif !important;
   font-size: 1em !important;
   font-weight: 500 !important;
   line-height: 2em !important;
+}
+
+p {
+  font-family: "Be Vietnam Pro", sans-serif !important;
+
 }
 
 .logo-nav {
@@ -310,6 +320,25 @@ ul {
 }
 .carousel-item-right {
   transform: translateX(100%) !important;
+}
+
+.form-control {
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  border-radius: 20px !important;
+  padding: 1em !important;
+}
+
+.send-button {
+  border-radius: 50% !important;
+
+}
+
+.modal-header {
+  border-bottom: 0 none !important; 
+}
+
+.modal-footer {
+  border-top: 0 none !important;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,600&family=Shippori+Antique+B1&display=swap");

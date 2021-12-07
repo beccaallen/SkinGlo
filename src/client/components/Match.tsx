@@ -5,19 +5,19 @@ import Confetti from 'react-dom-confetti';
 
 
 const Match: React.FC<MatchProps> = ({product1, product2}) => {
-  const config = {
-    angle: "185",
-    spread: "360",
-    startVelocity: "95",
-    elementCount: 70,
-    dragFriction: "0.47",
-    duration: "1990",
-    stagger: "9",
-    width: "21px",
-    height: "22px",
-    perspective: "900px",
-    colors: ["#000", "#333", "#666"]
-  };
+  // const config = {
+  //   angle: "185",
+  //   spread: "360",
+  //   startVelocity: "95",
+  //   elementCount: 70,
+  //   dragFriction: "0.47",
+  //   duration: "1990",
+  //   stagger: "9",
+  //   width: "21px",
+  //   height: "22px",
+  //   perspective: "900px",
+  //   colors: ["#000", "#333", "#666"]
+  // };
 
   const compareMore = () => {
     window.location.reload();
@@ -55,7 +55,7 @@ console.log(photo2[0])
           backgroundPositionX: "center",
         }}
       >
-          <Confetti active={ true } config={ config }/>
+          {/* <Confetti active={ true } config={ config }/> */}
         <div className="p-5">
             <div className="row bg-success p-5 mx-5">
               <h2 className="text-center">It's a Match!</h2>
