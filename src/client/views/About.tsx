@@ -90,10 +90,15 @@ const About: React.FC<AboutProps> = (props) => {
                 </div>
           </div>
         
-        <div className="mt-5">
+        
 
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner">
+            
+        <ol className="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol><div className="carousel-inner">
               <div className="carousel-item active">
                 <h6 className="text-center">
                   “ For years I was having trouble with acne flair ups, and my
@@ -109,7 +114,7 @@ const About: React.FC<AboutProps> = (props) => {
                 <br></br>
                 <p className="d-flex justify-content-end">- - Spencer D. </p>
               </div>
-<div className="carousel-item">
+              <div className='carousel-item'>
                 <h6 className="text-center">
                   “ I have never been very knowledgeable of the proper skincare.
                   Now, that I'm older, taking care of my skin is definitely of
@@ -157,7 +162,7 @@ const About: React.FC<AboutProps> = (props) => {
           </div> */}
           </div>
           </div>
-      </div>
+      
 
 
 {/* divider */}
