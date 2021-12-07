@@ -1,6 +1,18 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 
-const NonMatch: React.FC<NonMatchProps> = (props) => {
+const NonMatch: React.FC<NonMatchProps> = ({product1, product2}) => {
+
+  const [photos, setPhotos] = useState([])
+
+
+  useEffect(() => {
+    fetch(`/api/skinglo/photo/${product1[2]}`)
+      .then((res) => res.json())
+      .then((photos) => setPhotos(photos));
+  }, []);
+console.log(photos[0])
+
   return (
 
     <main className="container-fluid">
@@ -17,8 +29,8 @@ const NonMatch: React.FC<NonMatchProps> = (props) => {
           <div className="row bg-danger p-5 mx-5">
             <h2 className="text-center">It's Not a Match!</h2>
             <p className="conflict-reason text-center p-5 mx-5">
-                Because Product 1 contains <strong>lectus magna </strong> &
-                Product 2 contains <strong>fringilla urna </strong> this
+                Because {product1[0]} contains <strong>lectus magna </strong> &
+                {product2[0]} contains <strong>fringilla urna </strong> this
                 products are noncompatible. Metus aliquam eleifend mi in nulla
                 posuere sollicitudin. Semper eget duis at tellus at urna
                 condimentum mattis.
@@ -29,13 +41,13 @@ const NonMatch: React.FC<NonMatchProps> = (props) => {
             <div className="card card-nonmatch shadow">
               <img
                 className="card-img-top card-style"
-                src="../photos/products/AmorPacific time response eye renewal creme.jpg"
+                src={`../photos/products/${photos[0]}`}
                 alt="Card image cap"
               />
               <div className="card-body p-3">
                 <p className="card-text">
                   {" "}
-                  Time Response Skin Renewal Serum<br></br> <strong> Amore Pacific</strong>
+                  {product1[0]}<br></br> <strong> {product1[1]}</strong>
             
                 </p>
               </div>
@@ -48,13 +60,13 @@ const NonMatch: React.FC<NonMatchProps> = (props) => {
             <div className="card card-nonmatch shadow">
               <img
                 className="card-img-top card-style"
-                src="https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/8098296_fpx.tif?op_sharpen=1&wid=700&fit=fit,1&$filtersm$"
+                src={`../photos/products/${photos[0]}`}
                 alt="Card image cap"
               />
               <div className="card-body p-3">
                 <p className="card-text">
                   {" "}
-                  The Moisturizing Soft Cream<br></br> <strong> La Mer</strong>
+                  {product2[0]}<br></br> <strong> {product2[1]}</strong>
                 </p>
               </div>
             </div>
@@ -69,74 +81,13 @@ const NonMatch: React.FC<NonMatchProps> = (props) => {
     </div>
   </main>
 
-    // <main className="container-fluid">
-    //   <div
-    //     className="h-100 justify-content-center bg-img"
-    //     style={{
-    //       backgroundImage: `url("../photos/bg-compare.jpeg")`,
-    //       backgroundSize: "cover",
-    //       backgroundPositionY: "center",
-    //       backgroundPositionX: "center",
-    //     }}
-    //   >
-    //     <div className="p-5">
-          // <div className="row bg-danger p-5 mx-5">
-          //     <h2 className="text-center">It's a Not a Match!</h2>
-              // <p className="conflict-reason text-center p-5 mx-5">
-              //   Because Product 1 contains <strong>lectus magna </strong> &
-              //   Product 2 contains <strong>fringilla urna </strong> this
-              //   products are noncompatible. Metus aliquam eleifend mi in nulla
-              //   posuere sollicitudin. Semper eget duis at tellus at urna
-              //   condimentum mattis.
-              // </p>
-          // </div>
-    //       <div className="row justify-content-center align-items-center bg-primary  bg-opacity-75 mx-5 h-75">
-    //         <div className=" d-flex justify-content-center col-lg-3 ">
-    //           <div className="card card-nonmatch justify-content-center shadow">
-    //             <img
-    //               className="card-img-top"
-    //               src="../photos/products/t.l.c. sukari babyfacial.jpg"
-    //               alt="Card image cap"
-                  
-    //             />
-    //             <div className="card-body p-3">
-    //               <p className="card-text">
-    //                 {" "}
-    //                 t.l.c. sukari babyfacial <br></br> <strong> Drunk Elephant</strong>
-    //               </p>
-    //             </div>
-    //           </div>
-    //         </div>
-    //         <div className=" d-flex justify-content-center col-lg-1 ">
-    //           <div className="text-center ampersand text-white">&</div>
-    //         </div>
-    //         <div className=" d-flex justify-content-center col-lg-3 ">
-    //           <div className="card card-nonmatch shadow">
-    //             <img
-    //               className="card-img-top card-style"
-    //               src="https://www.sephora.com/productimages/sku/s2222941-main-zoom.jpg?imwidth=315"
-    //               alt="Card image cap"
-    //             />
-    //             <div className="card-body p-3">
-    //               <p className="card-text">
-    //                 {" "}
-    //               C.E.O  antioxidant protect + repair moisturize <br></br> <strong> Sunday Riley </strong>
-    //               </p>
-    //             </div>
-    //           </div>
-    //         </div>
-    //         <div className="row justify-content-center ">
-    //             <button className="btn btn-info compare-btn shadow">
-    //               Compare More
-    //             </button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </main>
+    
   );
 };
 
-interface NonMatchProps {}
+interface NonMatchProps {
+  product1:any
+  product2:any
+}
 
 export default NonMatch;
