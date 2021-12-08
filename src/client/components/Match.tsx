@@ -98,7 +98,7 @@ console.log(photo2[0])
             </div>
             <div className="row justify-content-center ">
                 <button className="btn btn-info compare-btn shadow" onClick={compareMore}>
-                  Compare More
+                  compare more
                 </button>
             </div>
           </div>
