@@ -41,7 +41,7 @@ const NonMatch: React.FC<NonMatchProps> = ({product1, product2, conflict}) => {
           <div className="row bg-warning pt-5 mx-5 justify-content-center">
             <div className="col-7">
             <h2 className="text-center">It's Not a Match!</h2>
-            <p className="conflict-reason text-center p-5 mx-5">
+            <p className="conflict-reason text-center px-5 mx-5">
               {conflict}
               </p>
               </div>

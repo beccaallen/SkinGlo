@@ -28,7 +28,19 @@ body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+
+  // animation: fadeInAnimation ease 3s;
+  // animation-iteration-count: 1;
+  // animation-fill-mode: forwards;
 }
+
+// @keyframes fadeInAnimation {
+//   0% {
+//       opacity: 0;
+//   }
+//   100% {
+//       opacity: 1;
+//    }
 // * {
 //   margin: 0 !important;
 //   padding: 0 !important;
@@ -197,14 +209,14 @@ label {
 
 .card-match {
   border-radius: 30px !important;
-  width: 22em !important;
-  height: 35em !important;
+  width: 18em !important;
+  height: 25em !important;
   border: $success 10px solid !important;
 }
 .card-nonmatch {
   border-radius: 30px !important;
-  width: 22em !important;
-  height: 35em !important;
+  width: 18em !important;
+  height: 25em !important;
   border: $danger 10px solid !important;
 }
 .card-body {
@@ -215,7 +227,7 @@ label {
 }
 .card-img-top {
   border-radius: 20px 20px 0px 0px !important;
-  height: 25em !important;
+  height: 17em !important;
   object-fit: cover !important;
 }
 
@@ -290,12 +302,12 @@ ul {
 }
 
 .headshots-about {
-  -webkit-filter: grayscale(100%) !important;
-  filter: grayscale(100%) !important;
+ 
   height: 10em !important;
   width: 10em !important;
   border-radius: 50% !important;
   object-fit: cover !important;
+  border: $info 10px solid !important;
   
 }
 
@@ -318,7 +330,7 @@ ul {
   text-align: center !important;
   background-color: $light !important;
   padding-top: 3em !important;
-  font-size: .87em !important;
+  font-size: .85em !important;
 }
 
 .carousel-inner{
@@ -361,6 +373,10 @@ ul {
 
 .modal-footer {
   border-top: 0 none !important;
+}
+
+.fade-in {
+  transition: opacity 2s ease;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,600&family=Shippori+Antique+B1&display=swap");
