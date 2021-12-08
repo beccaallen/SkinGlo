@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Match from "../components/Match";
 import NonMatch from "../components/NonMatch";
 import SearchBar from "../components/SearchBar";
-import $ from "jquery";
+import RingLoader from "react-spinners/RingLoader";
 
 const Compare: React.FC<CompareProps> = (props) => {
   const [products, setProducts] = useState([]);
@@ -19,6 +19,7 @@ const Compare: React.FC<CompareProps> = (props) => {
   const [matchView, setMatchView] = useState(false);
   const [nonMatchView, setNonMatchView] = useState(false);
   const [conflicts, setConflicts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch("/api/products")
@@ -64,23 +65,56 @@ const Compare: React.FC<CompareProps> = (props) => {
   };
 
   const handleMatch = async () => {
-    fetch(`/api/skinglo/conflicts/${product1[2]}&${product2[2]}`)
-      .then((res) => res.json())
-      .then((conflicts) => {
-        setConflicts(conflicts);
-        console.log(conflicts);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
 
-        if (Object.keys(conflicts).length === 0) {
-          setNonMatchView(false);
-          setMatchView(true);
-        } else {
-          setNonMatchView(true);
-          setMatchView(false);
-        }
-      });
+      fetch(`/api/skinglo/conflicts/${product1[2]}&${product2[2]}`)
+        .then((res) => res.json())
+        .then((conflicts) => {
+          setConflicts(conflicts);
+          console.log(conflicts);
+
+          if (Object.keys(conflicts).length === 0) {
+            setNonMatchView(false);
+            setMatchView(true);
+          } else {
+            setNonMatchView(true);
+            setMatchView(false);
+          }
+        });
+    }, 2000);
   };
 
-  if (nonMatchView) {
+  if (loading) {
+    return (
+        <main className="container-fluid">
+          <div
+            className="justify-content-center bg-img bg-compare-tint"
+            style={{
+              backgroundImage: `url("../photos/desaturated_compare-bg.jpg")`,
+              backgroundSize: "cover",
+              backgroundPositionY: "center",
+              backgroundPositionX: "center",
+            }}
+          >
+            
+        <div className="row  h-100 d-flex justify-content-center align-items-center">
+          <div className="col-4 d-flex flex-column align-items-center bg-light bg-opacity-75 p-5">
+            <RingLoader
+              color={"#c6c3d5"}
+              loading={loading}
+              css={"override"}
+              size={150}
+              
+            />
+            <h6 className="m-5 text-secondary">checking for compatibilty</h6>
+          </div>
+        </div>
+        </div>
+      </main>
+    );
+  } else if (nonMatchView) {
     return (
       <NonMatch
         product1={product1}
@@ -146,7 +180,7 @@ const Compare: React.FC<CompareProps> = (props) => {
                       className="col-lg-3 col-md-2 btn btn-info compare-btn shadow m-3 "
                       onClick={handleMatch}
                     >
-                      See if it's a match
+                      see if it's a match
                     </button>
                     <p
                       className="text-muted text-center p-3"
@@ -200,11 +234,11 @@ const Compare: React.FC<CompareProps> = (props) => {
                                   <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
                                 </svg>
                               </span>
-                              </h3>
+                            </h3>
 
-                       <p className="pt-3">
-                              Let us know below what which product you'd like us to
-                              review & we'll start running the tests!
+                            <p className="pt-3">
+                              Let us know below what which product you'd like us
+                              to review & we'll start running the tests!
                             </p>
                           </div>
                           <div className="modal-body">
