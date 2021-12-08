@@ -36,7 +36,7 @@ const About: React.FC<AboutProps> = (props) => {
       {/* divider */}
 
       <div className="row d-flex justify-content-center m-5">
-        <div className="col-lg-6 d-flex flex-column justify-content-center">
+        <div className="col-lg-5 d-flex flex-column justify-content-center">
           <div className="d-flex justify-content-center" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@ const About: React.FC<AboutProps> = (props) => {
       {/* divider */}
 
       <div
-        className="bg-primary background-tint-secondary product-logos"
+        className="bg-primary background-tint-secondary"
         style={{
           backgroundImage: `url("../photos/bg-meettheteam.jpeg")`,
           backgroundSize: "cover",
@@ -169,16 +169,16 @@ const About: React.FC<AboutProps> = (props) => {
           backgroundPositionX: "center",
         }}
       >
-        <div className="row bg-primary bg-opacity-75 align-items-center my-3 pb-3">
+        <div className="row bg-primary bg-opacity-75 align-items-center mt-3 pb-3">
           <h2 className="text-dark text-center m-5">meet the team behind SkinGlo</h2>
         </div>
 
-        <div className="row d-flex justify-content-center align-items-center ">
+        <div className="row d-flex justify-content-center align-items-center mt-3 ">
           <div className="col-lg-3 d-flex justify-content-center">
             <div className="card team-card">
               <img
                 src="../photos/beccaallen.jpg"
-                className="card-img-top headshots-about shadow"
+                className="card-img-top headshots-about"
                 alt="..."
               />
               <div className="card-body team-name">
@@ -189,8 +189,8 @@ const About: React.FC<AboutProps> = (props) => {
           <div className="col-lg-3 d-flex justify-content-center">
             <div className="card team-card">
               <img
-                src="../photos/IB-logo.jpeg"
-                className="card-img-top headshots-about shadow"
+                src="../photos/IB-logo.jpg"
+                className="card-img-top headshots-about"
                 alt="..."
               />
               <div className="card-body team-name">
@@ -202,7 +202,7 @@ const About: React.FC<AboutProps> = (props) => {
             <div className="card team-card">
               <img
                 src="../photos/JuwanRobinson.jpg"
-                className="card-img-top headshots-about shadow"
+                className="card-img-top headshots-about"
                 alt="..."
               />
               <div className="card-body team-name">
@@ -214,13 +214,13 @@ const About: React.FC<AboutProps> = (props) => {
 
         </div>
 
-        <div className="row d-flex justify-content-center align-items-center my-3 pb-3">
+        <div className="row d-flex justify-content-center align-items-center mt-3 pb-3">
 
           <div className="col-lg-3 d-flex justify-content-center">
             <div className="card team-card">
               <img
                 src="../photos/KyeJuanaAvery.jpg"
-                className="card-img-top headshots-about shadow"
+                className="card-img-top headshots-about"
                 alt="..."
               />
               <div className="card-body team-name">
@@ -233,7 +233,7 @@ const About: React.FC<AboutProps> = (props) => {
             <div className="card team-card">
               <img
                 src="../photos/GenesisGarcia.JPG"
-                className="card-img-top headshots-about shadow"
+                className="card-img-top headshots-about"
                 alt="..."
               />
               <div className="card-body team-name">
