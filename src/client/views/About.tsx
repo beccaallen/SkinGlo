@@ -2,12 +2,12 @@ import * as React from "react";
 
 const About: React.FC<AboutProps> = (props) => {
 
-// function moveCarousel (){
-//   document.getElementById("carouselExampleIndicators").carousel({
-//     interval: 1000
-//   })
-// }
-// React.useEffect(() => {moveCarousel()} , [])
+  // function moveCarousel (){
+  //   document.getElementById("carouselExampleIndicators").carousel({
+  //     interval: 1000
+  //   })
+  // }
+  // React.useEffect(() => {moveCarousel()} , [])
 
   return (
     <main className="container-fluid">
@@ -36,7 +36,7 @@ const About: React.FC<AboutProps> = (props) => {
       {/* divider */}
 
       <div className="row d-flex justify-content-center m-5">
-        <div className="col-lg-5 d-flex flex-column justify-content-center">
+        <div className="col-lg-8 d-flex flex-column justify-content-center">
           <div className="d-flex justify-content-center" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -108,40 +108,52 @@ const About: React.FC<AboutProps> = (props) => {
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol><div className="carousel-inner mt-3">
               <div className="carousel-item active">
-                <h6 className="text-center">
-                  “ For years I was having trouble with acne flair ups, and my
-                  dermatologist had continued recommending different combinations of
-                  facial cleansers, moisturizers, exfoliates, etc. along with
-                  prescriptive solutions as well. However, my flair ups persisted,
-                  and it wasn’t until I started comparing my products using SkinGlo
-                  that I realized the issue was using these products together.
-                  SkinGlo has helped me become more aware of the reactions my
-                  products have when used with each other, and I always use SkinGlo
-                  before I add a new product to my routine! ”
-                </h6>
-                <br></br>
-                <p className="d-flex justify-content-end">- - Spencer D. </p>
-              </div>
-              <div className='carousel-item'>
-                <h6 className="text-center">
-                  “ I have never been very knowledgeable of the proper skincare.
-                  Now, that I'm older, taking care of my skin is definitely of
-                  high importance. Thanks to SkinGlo, I am able to easily pick the
-                  right products for my skin. ”
-                </h6>
-                <br></br>
-                <p className="d-flex justify-content-end">- - K. Lanice </p>
+                <div className="w-75 m-auto">
+                  <h6 className="text-center">
+                    “ For years I was having trouble with acne flair ups, and my
+                    dermatologist had continued recommending different combinations of
+                    facial cleansers, moisturizers, exfoliates, etc. along with
+                    prescriptive solutions as well. However, my flair ups persisted,
+                    and it wasn’t until I started comparing my products using SkinGlo
+                    that I realized the issue was using these products together.
+                    SkinGlo has helped me become more aware of the reactions my
+                    products have when used with each other, and I always use SkinGlo
+                    before I add a new product to my routine! ”
+                  </h6>
+                  <br></br>
+                  <p className="d-flex justify-content-end">- - Spencer D. </p>
+                </div>
+
               </div>
               <div className="carousel-item">
-                <h6 className="text-center">
-                  “ Thanks SkinGlo for making this process effortless! You have
-                  drastically reduced the amount of time it takes me to find the
-                  right products. Now, I don't have to do so much research when
-                  working with my clients. I can just visit this site and find
-                  what I need in seconds!!! ”
-                </h6>
-                <br></br>
-                <p className="d-flex justify-content-end">- - Carol W. </p>
+                <div className="w-75 m-auto">
+                  <h6 className="text-center">
+                    <br />
+                    <br />
+                    <br />
+                    “ I have never been very knowledgeable of the proper skincare.
+                    Now, that I'm older, taking care of my skin is definitely of
+                    high importance. Thanks to SkinGlo, I am able to easily pick the
+                    right products for my skin. ”
+                  </h6>
+                  <br></br>
+                  <p className="d-flex justify-content-end">- - K. Lanice </p>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="w-75 m-auto">
+                  <h6 className="text-center">
+                    <br />
+                    <br />
+                    “ Thanks SkinGlo for making this process effortless! You have
+                    drastically reduced the amount of time it takes me to find the
+                    right products. Now, I don't have to do so much research when
+                    working with my clients. I can just visit this site and find
+                    what I need in seconds!!! ”
+                  </h6>
+                  <br></br>
+                  <p className="d-flex justify-content-end">- - Carol W. </p>
+                </div>
               </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
