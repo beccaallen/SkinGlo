@@ -351,6 +351,16 @@ ul {
 .carousel-item-right {
   transform: translateX(100%) !important;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 100px;
+  width: 300px;
+  outline: #f6aeae;
+  background-color: #f3d19f;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid #c6c3d5;
+  
+}
 
 .form-control {
   font-family: "Be Vietnam Pro", sans-serif !important;
