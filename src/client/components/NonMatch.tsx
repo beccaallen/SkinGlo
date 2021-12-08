@@ -29,7 +29,7 @@ const NonMatch: React.FC<NonMatchProps> = ({product1, product2, conflict}) => {
 
     <main className="container-fluid">
     <div
-      className="h-100 justify-content-center bg-img bg-compare-tint"
+      className="justify-content-center bg-img bg-compare-tint"
       style={{
         backgroundImage: `url("../photos/desaturated_compare-bg.jpg")`,
         backgroundSize: "cover",
@@ -38,7 +38,7 @@ const NonMatch: React.FC<NonMatchProps> = ({product1, product2, conflict}) => {
       }}
     >
       <div className="p-5">
-          <div className="row bg-danger pt-5 mx-5 justify-content-center">
+          <div className="row bg-warning pt-5 mx-5 justify-content-center">
             <div className="col-7">
             <h2 className="text-center">It's Not a Match!</h2>
             <p className="conflict-reason text-center p-5 mx-5">

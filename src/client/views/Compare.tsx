@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Match from "../components/Match";
 import NonMatch from "../components/NonMatch";
 import SearchBar from "../components/SearchBar";
+import $ from "jquery";
 
 const Compare: React.FC<CompareProps> = (props) => {
   const [products, setProducts] = useState([]);
@@ -94,7 +95,7 @@ const Compare: React.FC<CompareProps> = (props) => {
       <>
         <main className="container-fluid">
           <div
-            className="row justify-content-center align-items-center bg-compare-tint bg-opacity-75"
+            className="justify-content-center bg-img bg-compare-tint"
             style={{
               backgroundImage: `url("../photos/desaturated_compare-bg.jpg")`,
               backgroundSize: "cover",
@@ -155,11 +156,10 @@ const Compare: React.FC<CompareProps> = (props) => {
                       Where's my product?
                     </p>
                   </div>
-                  {/* start modal */}
+                  {/* start feedback modal */}
                   <div
                     className="modal fade"
                     id="Feedback"
-                    tabindex="-1"
                     role="dialog"
                     aria-labelledby="FeedbackTitle"
                     aria-hidden="true"
@@ -168,38 +168,43 @@ const Compare: React.FC<CompareProps> = (props) => {
                       className="modal-dialog modal-dialog-centered"
                       role="document"
                     >
-                      <div className="modal-content p-1">
+                      <div className="modal-content p-3">
                         <div className="container-fluid">
-                          <button
-                            type="button"
-                            className="close py-3"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                          >
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+                          <div className="d-flex justify-content-start">
+                            <button
+                              type="button"
+                              className="close p-3"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
 
-                          <div className="modal-header row ">
+                          <div className="modal-header row py-3 ">
                             <h3
                               className="modal-title"
                               id="exampleModalCenterTitle"
                             >
                               Didn't see your product?
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                className="bi bi-emoji-frown"
-                                viewBox="0 0 16 16"
-                              >
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
-                              </svg>
-                            </h3>
-                            <p>
-                              Let us know what which product you'd like us to
-                              review.
+                              <span>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="30"
+                                  height="30"
+                                  fill="currentColor"
+                                  className="bi bi-emoji-frown text-primary m-2"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                  <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
+                                </svg>
+                              </span>
+                              </h3>
+
+                       <p className="pt-3">
+                              Let us know below what which product you'd like us to
+                              review & we'll start running the tests!
                             </p>
                           </div>
                           <div className="modal-body">
@@ -225,12 +230,12 @@ const Compare: React.FC<CompareProps> = (props) => {
                             className="btn btn-info p-3 send-button"
                             data-toggle="modal"
                             data-target="#ThankYouForTheFeedback"
-                            onClick={$('#Feedback').modal('hide')}
+                            data-dismiss="modal"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
+                              width="20"
+                              height="20"
                               fill="currentColor"
                               className="bi bi-send-fill"
                               viewBox="0 0 16 16"
@@ -245,11 +250,12 @@ const Compare: React.FC<CompareProps> = (props) => {
                       </div>
                     </div>
                   </div>
-                  {/* end modal */}
+
+                  {/* end feedback modal */}
+                  {/* start thankyou modal */}
                   <div
                     className="modal fade"
                     id="ThankYouForTheFeedback"
-                    tabindex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true"
@@ -259,41 +265,59 @@ const Compare: React.FC<CompareProps> = (props) => {
                       role="document"
                     >
                       <div className="modal-content p-1">
-                        
                         <div className="container-fluid">
-                          <button
-                            type="button"
-                            className="close py-3"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                          >
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                          <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                className="bi bi-stars"
-                                viewBox="0 0 16 16"
-                              >
-                                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z" />
-                              </svg>
+                          <div className="modal-header d-flex justify-content-center pt-5">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="50"
+                              height="50"
+                              fill="currentColor"
+                              className="bi bi-stars text-primary"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z" />
+                            </svg>
+                          </div>
                           <div className="modal-body">
                             <h3
                               className="modal-title"
                               id="exampleModalCenterTitle"
                             >
                               Thanks for the Feedback!
-                            
                             </h3>
-                            <p>We'll get you glo-ing soon!  </p>
+                            <p>We'll get you glo-ing soon! </p>
                           </div>
                         </div>
-                        <div className="modal-footer p-3"></div>
+                        <div className="modal-footer p-3">
+                          <button
+                            type="button"
+                            className="btn btn-info p-3 send-button"
+                            data-toggle="modal"
+                            data-dismiss="modal"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              className="bi bi-x-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                              />
+                              <path
+                                fill-rule="evenodd"
+                                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  {/* end thankyou modal */}
                 </div>
               </div>
             </div>
