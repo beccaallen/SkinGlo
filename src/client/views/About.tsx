@@ -193,7 +193,7 @@ const About: React.FC<AboutProps> = (props) => {
                 className="card-img-top headshots-about"
                 alt="..."
               />
-              <div className="card-body team-name">
+              <div className="card-body team-name-sm">
                 <p className="card-text">Cameron Buchanan</p>
               </div>
             </div>

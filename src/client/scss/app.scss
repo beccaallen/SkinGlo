@@ -307,10 +307,18 @@ ul {
 
 }
 
+
 .team-name {
   text-align: center !important;
   background-color: $light !important;
   padding-top: 3em !important;
+}
+
+.team-name-sm {
+  text-align: center !important;
+  background-color: $light !important;
+  padding-top: 3em !important;
+  font-size: .87em !important;
 }
 
 .carousel-inner{
